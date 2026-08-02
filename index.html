@@ -1518,7 +1518,7 @@
             max-height: 80vh;
             object-fit: contain;
             border-radius: var(--radius-md);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
         }
 
         .lightbox-close {
@@ -1562,9 +1562,17 @@
             transition: background 0.2s var(--ease);
         }
 
-        .lightbox-nav.prev { left: 10px; }
-        .lightbox-nav.next { right: 10px; }
-        .lightbox-nav:active { background: rgba(255, 255, 255, 0.35); }
+        .lightbox-nav.prev {
+            left: 10px;
+        }
+
+        .lightbox-nav.next {
+            right: 10px;
+        }
+
+        .lightbox-nav:active {
+            background: rgba(255, 255, 255, 0.35);
+        }
 
         .lightbox-caption {
             color: rgba(255, 255, 255, 0.85);
@@ -1738,7 +1746,7 @@
                 <div class="product-card reveal" data-category="ca" style="transition-delay:160ms;">
                     <div class="product-img-wrap">
                         <span class="product-tag premium">Premium</span>
-                        <img src="ca-notebook-cover.jpg" alt="CA Vinod Reddy Notebook 172 pages premium paper">
+                        <img src="gallery/nb (3).jpg" alt="CA Vinod Reddy Notebook 172 pages premium paper">
                     </div>
                     <div class="product-body">
                         <h3 class="product-name">CA Notebooks</h3>
@@ -1857,482 +1865,518 @@
                 <p class="banner-desc">By Students For Students</p>
                 <div class="banner-badge">COST-TO-COST Prices</div>
             </div>
-    <!-- GALLERY -->
-    <section class="section" id="gallery">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-overline">Gallery</div>
-                <h2 class="section-title">Notebook Showcase</h2>
-                <p class="section-desc">Tap any cover to view in full resolution.</p>
-                <div class="section-divider"></div>
-            </div>
+            <!-- GALLERY -->
+            <section class="section" id="gallery">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <div class="section-overline">Gallery</div>
+                        <h2 class="section-title">Notebook Showcase</h2>
+                        <p class="section-desc">Tap any cover to view in full resolution.</p>
+                        <div class="section-divider"></div>
+                    </div>
 
-            <div class="gallery-grid">
-                <div class="gallery-item reveal" onclick="openLightbox(0)">
-                    <img src="gallery/nb (1).jpg" alt="Notebook Design 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" style="transition-delay:40ms;" onclick="openLightbox(1)">
-                    <img src="gallery/nb (2).jpg" alt="Notebook Design 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" style="transition-delay:80ms;" onclick="openLightbox(2)">
-                    <img src="gallery/nb (3).jpg" alt="Notebook Design 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" style="transition-delay:120ms;" onclick="openLightbox(3)">
-                    <img src="gallery/nb(4).jpg" alt="Notebook Design 4" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" style="transition-delay:160ms;" onclick="openLightbox(4)">
-                    <img src="gallery/nb(5).jpg" alt="Notebook Design 5" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" style="transition-delay:200ms;" onclick="openLightbox(5)">
-                    <img src="gallery/nb (6).jpg" alt="Notebook Design 6" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" style="transition-delay:240ms;" onclick="openLightbox(6)">
-                    <img src="gallery/nb (7).jpg" alt="Notebook Design 7" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" style="transition-delay:280ms;" onclick="openLightbox(7)">
-                    <img src="gallery/nb (8).jpg" alt="Notebook Design 8" loading="lazy">
-                    <div class="gallery-overlay">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LIGHTBOX MODAL -->
-    <div class="lightbox-modal" id="lightboxModal">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-        <button class="lightbox-nav prev" onclick="changeLightbox(-1)">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="lightbox-img-wrap">
-            <img id="lightboxImg" src="" alt="Enlarged Notebook">
-        </div>
-        <button class="lightbox-nav next" onclick="changeLightbox(1)">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="lightbox-caption" id="lightboxCaption">Design 1 of 8</div>
-    </div>
-
-    <!-- TESTIMONIALS -->
-    <section class="section" id="reviews" style="background: var(--white);">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-overline">Reviews</div>
-                <h2 class="section-title">What Students Say</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="testimonials-scroll">
-                <div class="testimonial-card reveal">
-                    <div class="t-stars">★★★★★</div>
-                    <p class="t-text">"The paper quality is amazing! My pen just glides on the page, and there's no ink
-                        bleeding through. Finally, a notebook worth the price."</p>
-                    <div class="t-author">
-                        <div class="t-avatar">R</div>
-                        <div>
-                            <div class="t-name">Rohan S.</div>
-                            <div class="t-role">Engineering Student</div>
+                    <div class="gallery-grid">
+                        <div class="gallery-item reveal" onclick="openLightbox(0)">
+                            <img src="gallery/nb (1).jpg" alt="Notebook Design 1" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery-item reveal" style="transition-delay:40ms;" onclick="openLightbox(1)">
+                            <img src="gallery/nb (2).jpg" alt="Notebook Design 2" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery-item reveal" style="transition-delay:80ms;" onclick="openLightbox(2)">
+                            <img src="gallery/nb (3).jpg" alt="Notebook Design 3" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery-item reveal" style="transition-delay:120ms;" onclick="openLightbox(3)">
+                            <img src="gallery/nb(4).jpg" alt="Notebook Design 4" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery-item reveal" style="transition-delay:160ms;" onclick="openLightbox(4)">
+                            <img src="gallery/nb(5).jpg" alt="Notebook Design 5" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery-item reveal" style="transition-delay:200ms;" onclick="openLightbox(5)">
+                            <img src="gallery/nb (6).jpg" alt="Notebook Design 6" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery-item reveal" style="transition-delay:240ms;" onclick="openLightbox(6)">
+                            <img src="gallery/nb (7).jpg" alt="Notebook Design 7" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery-item reveal" style="transition-delay:280ms;" onclick="openLightbox(7)">
+                            <img src="gallery/nb (8).jpg" alt="Notebook Design 8" loading="lazy">
+                            <div class="gallery-overlay">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal" style="transition-delay:80ms;">
-                    <div class="t-stars">★★★★★</div>
-                    <p class="t-text">"I love the cover designs. The binding is really strong and has survived my packed
-                        bag all semester. Great value for money!"</p>
-                    <div class="t-author">
-                        <div class="t-avatar">P</div>
-                        <div>
-                            <div class="t-name">Priya K.</div>
-                            <div class="t-role">Engineering Student</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal" style="transition-delay:160ms;">
-                    <div class="t-stars">★★★★★</div>
-                    <p class="t-text">"Best value for money, every rupee counts as a student. Notebook Wallah delivers
-                        on both quality and affordability. Highly recommended!"</p>
-                    <div class="t-author">
-                        <div class="t-avatar">A</div>
-                        <div>
-                            <div class="t-name">Arjun M.</div>
-                            <div class="t-role">Engineering Student</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swipe-hint">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M5 12h14m-4-4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Swipe for more
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-overline">Help</div>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div>
-                <details class="faq-item reveal">
-                    <summary>Is there a minimum order quantity?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">No minimum order! Buy even one notebook.</p>
-                </details>
-                <details class="faq-item reveal" style="transition-delay:60ms;">
-                    <summary>Do you offer delivery?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">Currently pickup-only from our Alandi location. Visit us after 5 PM or tap
-                        "Get
-                        Directions" below. Delivery options coming soon!</p>
-                </details>
-                <details class="faq-item reveal" style="transition-delay:120ms;">
-                    <summary>What is the paper quality?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">Our notebooks use high quality paper from eco-friendly, responsibly managed
-                        forests.
-                        Thick enough to prevent ink bleeding, providing a smooth writing experience.</p>
-                </details>
-                <details class="faq-item reveal" style="transition-delay:180ms;">
-                    <summary>What's the difference between the 3 types?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">Ganga (172 pages, ₹40) — classic everyday. Fusion (200 pages, ₹45) — best
-                        value with extra pages. CA Books (172 pages, ₹45) — premium paper for the smoothest writing.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact" style="background: var(--white);">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-overline">Contact</div>
-                <h2 class="section-title">Ready to Order?</h2>
-                <p class="section-desc">Message us on WhatsApp or visit us in Alandi after 5 PM.</p>
-                <div class="section-divider"></div>
-            </div>
-            <div class="contact-row">
-                <div class="contact-card reveal">
-                    <div class="c-name">Atharv Jadhav</div>
-                    <div class="c-phone"><a href="tel:7796711431">7796711431</a></div>
-                    <a href="https://wa.me/917796711431?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
-                        target="_blank" rel="noopener noreferrer" class="btn-wa">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
-                        </svg>
-                        WhatsApp
-                    </a>
-                </div>
-                <div class="contact-card reveal" style="transition-delay:80ms;">
-                    <div class="c-name">Pankaj Shinde</div>
-                    <div class="c-phone"><a href="tel:8788364740">8788364740</a></div>
-                    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
-                        target="_blank" rel="noopener noreferrer" class="btn-wa">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
-                        </svg>
-                        WhatsApp
-                    </a>
-                </div>
-            </div>
-            <a href="https://maps.app.goo.gl/8VAYwAFPrsnDFqv16?g_st=aw" target="_blank" rel="noopener noreferrer"
-                class="btn-map reveal" style="transition-delay:120ms;">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Get Directions — Pune
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-brand">
-                <img src="notebook-wallah-logo.png" alt="Notebook Wallah">
-                <span class="footer-brand-text">Notebook <span>Wallah</span></span>
-            </div>
-            <p class="footer-copy">© 2025 Notebook Wallah · Made with ❤️ in Pune</p>
-        </div>
-    </footer>
-
-    <!-- ORDER MODAL -->
-    <div class="modal-overlay" id="orderModal">
-        <div class="modal-sheet">
-            <div class="modal-handle"></div>
-            <div class="modal-head">
-                <h3 class="modal-title" id="modalTitle">Order Notebook</h3>
-                <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
-            </div>
-            <form id="orderForm" onsubmit="return false;">
-                <div class="form-group">
-                    <label class="form-label" for="fName">Your Name</label>
-                    <input class="form-input" type="text" id="fName" placeholder="e.g., Rohan Sharma">
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label" for="fProduct">Product</label>
-                        <input class="form-input" type="text" id="fProduct" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="fQty">Quantity</label>
-                        <input class="form-input" type="number" id="fQty" value="1" min="1">
-                    </div>
-                </div>
-                <button type="button" class="btn-submit-wa" onclick="submitOrder()">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+            <!-- LIGHTBOX MODAL -->
+            <div class="lightbox-modal" id="lightboxModal">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+                <button class="lightbox-nav prev" onclick="changeLightbox(-1)">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    Send Order via WhatsApp
                 </button>
-            </form>
-            <p class="form-note">You'll be redirected to WhatsApp to confirm your order</p>
-        </div>
-    </div>
+                <div class="lightbox-img-wrap">
+                    <img id="lightboxImg" src="" alt="Enlarged Notebook">
+                </div>
+                <button class="lightbox-nav next" onclick="changeLightbox(1)">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="lightbox-caption" id="lightboxCaption">Design 1 of 8</div>
+            </div>
 
-    <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
-        target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path
-                d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
-        </svg>
-    </a>
+            <!-- TESTIMONIALS -->
+            <section class="section" id="reviews" style="background: var(--white);">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <div class="section-overline">Reviews</div>
+                        <h2 class="section-title">What Students Say</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="testimonials-scroll">
+                        <div class="testimonial-card reveal">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"The paper quality is amazing! My pen just glides on the page, and there's
+                                no ink
+                                bleeding through. Finally, a notebook worth the price."</p>
+                            <div class="t-author">
+                                <div class="t-avatar">R</div>
+                                <div>
+                                    <div class="t-name">Rohan S.</div>
+                                    <div class="t-role">Engineering Student</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card reveal" style="transition-delay:80ms;">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"I love the cover designs. The binding is really strong and has survived
+                                my packed
+                                bag all semester. Great value for money!"</p>
+                            <div class="t-author">
+                                <div class="t-avatar">P</div>
+                                <div>
+                                    <div class="t-name">Priya K.</div>
+                                    <div class="t-role">Engineering Student</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card reveal" style="transition-delay:160ms;">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"Best value for money, every rupee counts as a student. Notebook Wallah
+                                delivers
+                                on both quality and affordability. Highly recommended!"</p>
+                            <div class="t-author">
+                                <div class="t-avatar">A</div>
+                                <div>
+                                    <div class="t-name">Arjun M.</div>
+                                    <div class="t-role">Engineering Student</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swipe-hint">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14m-4-4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Swipe for more
+                    </div>
+                </div>
+            </section>
 
-    <script>
-        // === Navbar scroll ===
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 30), { passive: true });
+            <!-- FAQ -->
+            <section class="section" id="faq">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <div class="section-overline">Help</div>
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div>
+                        <details class="faq-item reveal">
+                            <summary>Is there a minimum order quantity?<span class="faq-chevron">+</span></summary>
+                            <p class="faq-answer">No minimum order! Buy even one notebook.</p>
+                        </details>
+                        <details class="faq-item reveal" style="transition-delay:60ms;">
+                            <summary>Do you offer delivery?<span class="faq-chevron">+</span></summary>
+                            <p class="faq-answer">Currently pickup-only from our Alandi location. Visit us after 5 PM or
+                                tap
+                                "Get
+                                Directions" below. Delivery options coming soon!</p>
+                        </details>
+                        <details class="faq-item reveal" style="transition-delay:120ms;">
+                            <summary>What is the paper quality?<span class="faq-chevron">+</span></summary>
+                            <p class="faq-answer">Our notebooks use high quality paper from eco-friendly, responsibly
+                                managed
+                                forests.
+                                Thick enough to prevent ink bleeding, providing a smooth writing experience.</p>
+                        </details>
+                        <details class="faq-item reveal" style="transition-delay:180ms;">
+                            <summary>What's the difference between the 3 types?<span class="faq-chevron">+</span>
+                            </summary>
+                            <p class="faq-answer">Ganga (172 pages, ₹40) — classic everyday. Fusion (200 pages, ₹45) —
+                                best
+                                value with extra pages. CA Books (172 pages, ₹45) — premium paper for the smoothest
+                                writing.</p>
+                        </details>
+                    </div>
+                </div>
+            </section>
 
-        // === Hero Carousel (image-only, auto-rotate with progress bar) ===
-        const heroTrack = document.getElementById('heroTrack');
-        const heroDots = document.querySelectorAll('.hero-dot');
-        const progressBar = document.getElementById('heroProgressBar');
-        let heroIndex = 0;
-        const heroTotal = 4;
-        const slideInterval = 4000; // 4 seconds per slide
-        let heroTimer, progressTimer;
-        let progressStart;
+            <!-- CONTACT -->
+            <section class="section" id="contact" style="background: var(--white);">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <div class="section-overline">Contact</div>
+                        <h2 class="section-title">Ready to Order?</h2>
+                        <p class="section-desc">Message us on WhatsApp or visit us in Alandi after 5 PM.</p>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="contact-card reveal">
+                            <div class="c-name">Atharv Jadhav</div>
+                            <div class="c-phone"><a href="tel:7796711431">7796711431</a></div>
+                            <a href="https://wa.me/917796711431?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
+                                target="_blank" rel="noopener noreferrer" class="btn-wa">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                        <div class="contact-card reveal" style="transition-delay:80ms;">
+                            <div class="c-name">Pankaj Shinde</div>
+                            <div class="c-phone"><a href="tel:8788364740">8788364740</a></div>
+                            <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
+                                target="_blank" rel="noopener noreferrer" class="btn-wa">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://maps.app.goo.gl/8VAYwAFPrsnDFqv16?g_st=aw" target="_blank"
+                        rel="noopener noreferrer" class="btn-map reveal" style="transition-delay:120ms;">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Get Directions — Pune
+                    </a>
+                </div>
+            </section>
 
-        function goHero(i) {
-            heroIndex = i;
-            heroTrack.style.transform = `translateX(-${heroIndex * 100}%)`;
-            heroDots.forEach((d, idx) => d.classList.toggle('active', idx === heroIndex));
-        }
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-brand">
+                        <img src="notebook-wallah-logo.png" alt="Notebook Wallah">
+                        <span class="footer-brand-text">Notebook <span>Wallah</span></span>
+                    </div>
+                    <p class="footer-copy">© 2025 Notebook Wallah · Made with ❤️ in Pune</p>
+                </div>
+            </footer>
 
-        function animateProgress() {
-            progressStart = performance.now();
-            cancelAnimationFrame(progressTimer);
-            function tick(now) {
-                const elapsed = now - progressStart;
-                const pct = Math.min((elapsed / slideInterval) * 100, 100);
-                progressBar.style.width = pct + '%';
-                if (pct < 100) {
+            <!-- ORDER MODAL -->
+            <div class="modal-overlay" id="orderModal">
+                <div class="modal-sheet">
+                    <div class="modal-handle"></div>
+                    <div class="modal-head">
+                        <h3 class="modal-title" id="modalTitle">Order Notebook</h3>
+                        <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
+                    </div>
+                    <form id="orderForm" onsubmit="return false;">
+                        <div class="form-group">
+                            <label class="form-label" for="fName">Your Name</label>
+                            <input class="form-input" type="text" id="fName" placeholder="e.g., Rohan Sharma">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="fProduct">Product</label>
+                                <input class="form-input" type="text" id="fProduct" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="fQty">Quantity</label>
+                                <input class="form-input" type="number" id="fQty" value="1" min="1">
+                            </div>
+                        </div>
+                        <button type="button" class="btn-submit-wa" onclick="submitOrder()">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+                            </svg>
+                            Send Order via WhatsApp
+                        </button>
+                    </form>
+                    <p class="form-note">You'll be redirected to WhatsApp to confirm your order</p>
+                </div>
+            </div>
+
+            <!-- FLOATING WHATSAPP -->
+            <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
+                target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+                </svg>
+            </a>
+
+            <script>
+                // === Navbar scroll ===
+                const navbar = document.getElementById('navbar');
+                window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 30), { passive: true });
+
+                // === Hero Carousel (image-only, auto-rotate with progress bar) ===
+                const heroTrack = document.getElementById('heroTrack');
+                const heroDots = document.querySelectorAll('.hero-dot');
+                const progressBar = document.getElementById('heroProgressBar');
+                let heroIndex = 0;
+                const heroTotal = 4;
+                const slideInterval = 4000; // 4 seconds per slide
+                let heroTimer, progressTimer;
+                let progressStart;
+
+                function goHero(i) {
+                    heroIndex = i;
+                    heroTrack.style.transform = `translateX(-${heroIndex * 100}%)`;
+                    heroDots.forEach((d, idx) => d.classList.toggle('active', idx === heroIndex));
+                }
+
+                function animateProgress() {
+                    progressStart = performance.now();
+                    cancelAnimationFrame(progressTimer);
+                    function tick(now) {
+                        const elapsed = now - progressStart;
+                        const pct = Math.min((elapsed / slideInterval) * 100, 100);
+                        progressBar.style.width = pct + '%';
+                        if (pct < 100) {
+                            progressTimer = requestAnimationFrame(tick);
+                        }
+                    }
                     progressTimer = requestAnimationFrame(tick);
                 }
-            }
-            progressTimer = requestAnimationFrame(tick);
-        }
 
-        function nextHero() {
-            goHero((heroIndex + 1) % heroTotal);
-            animateProgress();
-        }
-
-        function startHero() {
-            animateProgress();
-            heroTimer = setInterval(nextHero, slideInterval);
-        }
-
-        function resetHero() {
-            clearInterval(heroTimer);
-            startHero();
-        }
-
-        heroDots.forEach(d => d.addEventListener('click', () => {
-            goHero(parseInt(d.dataset.i));
-            resetHero();
-        }));
-
-        // Touch swipe
-        let tx0 = 0;
-        heroTrack.addEventListener('touchstart', e => { tx0 = e.changedTouches[0].screenX; }, { passive: true });
-        heroTrack.addEventListener('touchend', e => {
-            const diff = tx0 - e.changedTouches[0].screenX;
-            if (Math.abs(diff) > 50) {
-                if (diff > 0 && heroIndex < heroTotal - 1) goHero(heroIndex + 1);
-                else if (diff < 0 && heroIndex > 0) goHero(heroIndex - 1);
-                resetHero();
-            }
-        }, { passive: true });
-
-        startHero();
-
-        // === Order Modal ===
-        const modal = document.getElementById('orderModal');
-        const modalCloseBtn = document.getElementById('modalCloseBtn');
-        let curPrice = 0;
-
-        function openModal(product, price) {
-            document.getElementById('fProduct').value = product;
-            document.getElementById('modalTitle').textContent = 'Order ' + product.split('–')[0].trim();
-            curPrice = price;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        modalCloseBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-
-        function submitOrder() {
-            const name = document.getElementById('fName').value.trim() || 'Customer';
-            const product = document.getElementById('fProduct').value;
-            const qty = document.getElementById('fQty').value;
-            const total = curPrice * qty;
-            let msg = `Hi! I'd like to order from *Notebook Wallah*  \n\n*Name:* ${name}\n*Product:* ${product}\n*Qty:* ${qty}\n*Est. Total:* ₹${total}`;
-            if (qty >= 10000) msg += `\n\nBulk order — please share wholesale price! `;
-            window.open(`https://wa.me/918788364740?text=${encodeURIComponent(msg)}`, '_blank');
-            closeModal();
-        }
-
-        // === Scroll Reveal ===
-        const revealObs = new IntersectionObserver((entries, obs) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-            });
-        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-        // === Aesthetic Preloader Dismissal ===
-        function dismissPreloader() {
-            const preloader = document.getElementById('preloader');
-            if (preloader && !preloader.classList.contains('fade-out')) {
-                preloader.classList.add('fade-out');
-            }
-        }
-        window.addEventListener('load', () => setTimeout(dismissPreloader, 500));
-        setTimeout(dismissPreloader, 2000); // Safety fallback
-
-        // === Product Filter Pills ===
-        function filterProducts(category, btn) {
-            document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
-            if (btn) btn.classList.add('active');
-
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
+                function nextHero() {
+                    goHero((heroIndex + 1) % heroTotal);
+                    animateProgress();
                 }
-            });
-        }
 
-        // === Product Deck Scroll Dots Sync (Mobile) ===
-        const pGrid = document.getElementById('productsGrid');
-        const pDots = document.querySelectorAll('.product-deck-dot');
-        if (pGrid && pDots.length) {
-            pGrid.addEventListener('scroll', () => {
-                const scrollLeft = pGrid.scrollLeft;
-                const cardWidth = pGrid.firstElementChild ? pGrid.firstElementChild.offsetWidth + 16 : 300;
-                const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), pDots.length - 1);
-                pDots.forEach((dot, idx) => {
-                    dot.classList.toggle('active', idx === activeIndex);
+                function startHero() {
+                    animateProgress();
+                    heroTimer = setInterval(nextHero, slideInterval);
+                }
+
+                function resetHero() {
+                    clearInterval(heroTimer);
+                    startHero();
+                }
+
+                heroDots.forEach(d => d.addEventListener('click', () => {
+                    goHero(parseInt(d.dataset.i));
+                    resetHero();
+                }));
+
+                // Touch swipe
+                let tx0 = 0;
+                heroTrack.addEventListener('touchstart', e => { tx0 = e.changedTouches[0].screenX; }, { passive: true });
+                heroTrack.addEventListener('touchend', e => {
+                    const diff = tx0 - e.changedTouches[0].screenX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0 && heroIndex < heroTotal - 1) goHero(heroIndex + 1);
+                        else if (diff < 0 && heroIndex > 0) goHero(heroIndex - 1);
+                        resetHero();
+                    }
+                }, { passive: true });
+
+                startHero();
+
+                // === Order Modal ===
+                const modal = document.getElementById('orderModal');
+                const modalCloseBtn = document.getElementById('modalCloseBtn');
+                let curPrice = 0;
+
+                function openModal(product, price) {
+                    document.getElementById('fProduct').value = product;
+                    document.getElementById('modalTitle').textContent = 'Order ' + product.split('–')[0].trim();
+                    curPrice = price;
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeModal() {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+
+                modalCloseBtn.addEventListener('click', closeModal);
+                modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+                function submitOrder() {
+                    const name = document.getElementById('fName').value.trim() || 'Customer';
+                    const product = document.getElementById('fProduct').value;
+                    const qty = document.getElementById('fQty').value;
+                    const total = curPrice * qty;
+                    let msg = `Hi! I'd like to order from *Notebook Wallah*  \n\n*Name:* ${name}\n*Product:* ${product}\n*Qty:* ${qty}\n*Est. Total:* ₹${total}`;
+                    if (qty >= 10000) msg += `\n\nBulk order — please share wholesale price! `;
+                    window.open(`https://wa.me/918788364740?text=${encodeURIComponent(msg)}`, '_blank');
+                    closeModal();
+                }
+
+                // === Scroll Reveal ===
+                const revealObs = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+                    });
+                }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+                document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+                // === Aesthetic Preloader Dismissal ===
+                function dismissPreloader() {
+                    const preloader = document.getElementById('preloader');
+                    if (preloader && !preloader.classList.contains('fade-out')) {
+                        preloader.classList.add('fade-out');
+                    }
+                }
+                window.addEventListener('load', () => setTimeout(dismissPreloader, 500));
+                setTimeout(dismissPreloader, 2000); // Safety fallback
+
+                // === Product Filter Pills ===
+                function filterProducts(category, btn) {
+                    document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+                    if (btn) btn.classList.add('active');
+
+                    const cards = document.querySelectorAll('.product-card');
+                    cards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+
+                // === Product Deck Scroll Dots Sync (Mobile) ===
+                const pGrid = document.getElementById('productsGrid');
+                const pDots = document.querySelectorAll('.product-deck-dot');
+                if (pGrid && pDots.length) {
+                    pGrid.addEventListener('scroll', () => {
+                        const scrollLeft = pGrid.scrollLeft;
+                        const cardWidth = pGrid.firstElementChild ? pGrid.firstElementChild.offsetWidth + 16 : 300;
+                        const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), pDots.length - 1);
+                        pDots.forEach((dot, idx) => {
+                            dot.classList.toggle('active', idx === activeIndex);
+                        });
+                    }, { passive: true });
+                }
+
+                // === Gallery Lightbox Logic ===
+                const galleryImages = [
+                    'gallery/nb (1).jpg',
+                    'gallery/nb (2).jpg',
+                    'gallery/nb (3).jpg',
+                    'gallery/nb(4).jpg',
+                    'gallery/nb(5).jpg',
+                    'gallery/nb (6).jpg',
+                    'gallery/nb (7).jpg',
+                    'gallery/nb (8).jpg'
+                ];
+                let currentLbIndex = 0;
+                const lbModal = document.getElementById('lightboxModal');
+                const lbImg = document.getElementById('lightboxImg');
+                const lbCap = document.getElementById('lightboxCaption');
+                const lbClose = document.getElementById('lightboxClose');
+
+                function openLightbox(index) {
+                    currentLbIndex = index;
+                    lbImg.src = galleryImages[currentLbIndex];
+                    lbCap.textContent = `Design ${currentLbIndex + 1} of ${galleryImages.length}`;
+                    lbModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeLightbox() {
+                    lbModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+
+                function changeLightbox(dir) {
+                    currentLbIndex = (currentLbIndex + dir + galleryImages.length) % galleryImages.length;
+                    lbImg.src = galleryImages[currentLbIndex];
+                    lbCap.textContent = `Design ${currentLbIndex + 1} of ${galleryImages.length}`;
+                }
+
+                if (lbClose) lbClose.addEventListener('click', closeLightbox);
+                if (lbModal) {
+                    lbModal.addEventListener('click', (e) => {
+                        if (e.target === lbModal) closeLightbox();
+                    });
+                    let lbX0 = 0;
+                    lbModal.addEventListener('touchstart', e => { lbX0 = e.changedTouches[0].screenX; }, { passive: true });
+                    lbModal.addEventListener('touchend', e => {
+                        const diff = lbX0 - e.changedTouches[0].screenX;
+                        if (Math.abs(diff) > 40) {
+                            if (diff > 0) changeLightbox(1);
+                            else changeLightbox(-1);
+                        }
+                    }, { passive: true });
+                }
+
+                document.addEventListener('keydown', e => {
+                    if (!lbModal.classList.contains('active')) return;
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowRight') changeLightbox(1);
+                    if (e.key === 'ArrowLeft') changeLightbox(-1);
                 });
-            }, { passive: true });
-        }
-
-        // === Gallery Lightbox Logic ===
-        const galleryImages = [
-            'gallery/nb (1).jpg',
-            'gallery/nb (2).jpg',
-            'gallery/nb (3).jpg',
-            'gallery/nb(4).jpg',
-            'gallery/nb(5).jpg',
-            'gallery/nb (6).jpg',
-            'gallery/nb (7).jpg',
-            'gallery/nb (8).jpg'
-        ];
-        let currentLbIndex = 0;
-        const lbModal = document.getElementById('lightboxModal');
-        const lbImg = document.getElementById('lightboxImg');
-        const lbCap = document.getElementById('lightboxCaption');
-        const lbClose = document.getElementById('lightboxClose');
-
-        function openLightbox(index) {
-            currentLbIndex = index;
-            lbImg.src = galleryImages[currentLbIndex];
-            lbCap.textContent = `Design ${currentLbIndex + 1} of ${galleryImages.length}`;
-            lbModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lbModal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function changeLightbox(dir) {
-            currentLbIndex = (currentLbIndex + dir + galleryImages.length) % galleryImages.length;
-            lbImg.src = galleryImages[currentLbIndex];
-            lbCap.textContent = `Design ${currentLbIndex + 1} of ${galleryImages.length}`;
-        }
-
-        if (lbClose) lbClose.addEventListener('click', closeLightbox);
-        if (lbModal) {
-            lbModal.addEventListener('click', (e) => {
-                if (e.target === lbModal) closeLightbox();
-            });
-            let lbX0 = 0;
-            lbModal.addEventListener('touchstart', e => { lbX0 = e.changedTouches[0].screenX; }, { passive: true });
-            lbModal.addEventListener('touchend', e => {
-                const diff = lbX0 - e.changedTouches[0].screenX;
-                if (Math.abs(diff) > 40) {
-                    if (diff > 0) changeLightbox(1);
-                    else changeLightbox(-1);
-                }
-            }, { passive: true });
-        }
-
-        document.addEventListener('keydown', e => {
-            if (!lbModal.classList.contains('active')) return;
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') changeLightbox(1);
-            if (e.key === 'ArrowLeft') changeLightbox(-1);
-        });
-    </script>
+            </script>
 </body>
 
 </html>
