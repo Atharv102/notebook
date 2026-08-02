@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Notebook Wallah | Premium Student Notebooks at Best Prices in Pune</title>
-    <meta name="description" content="Notebook Wallah — Premium quality student notebooks at unbeatable prices. Ganga, Fusion & CA Books. Order via WhatsApp in Pune.">
+    <meta name="description"
+        content="Notebook Wallah — Premium quality student notebooks at unbeatable prices. Ganga, Fusion & CA Books. Order via WhatsApp in Pune.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         /* ===== RESET ===== */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --white: #FFFFFF;
@@ -34,22 +44,25 @@
             --amber-light: #FDF0E4;
             --whatsapp: #25D366;
             --whatsapp-hover: #1EBE57;
-            --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
-            --shadow-xl: 0 16px 48px rgba(0,0,0,0.12);
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 16px;
             --radius-xl: 20px;
             --radius-full: 9999px;
             --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Playfair Display', Georgia, serif;
+            --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
             --ease: cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
 
         body {
             font-family: var(--font-body);
@@ -61,10 +74,26 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        img { max-width: 100%; display: block; }
-        a { text-decoration: none; color: inherit; }
-        button { border: none; cursor: pointer; font-family: inherit; background: none; }
-        ul { list-style: none; }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            background: none;
+        }
+
+        ul {
+            list-style: none;
+        }
 
         .container {
             width: 100%;
@@ -72,8 +101,18 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        @media (min-width: 768px) { .container { max-width: 720px; } }
-        @media (min-width: 1024px) { .container { max-width: 960px; } }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 960px;
+            }
+        }
 
         /* ===== ANIMATIONS ===== */
         .reveal {
@@ -81,19 +120,42 @@
             transform: translateY(28px);
             transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
         }
+
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         @keyframes scaleIn {
-            from { transform: scale(1.08); }
-            to { transform: scale(1); }
+            from {
+                transform: scale(1.08);
+            }
+
+            to {
+                transform: scale(1);
+            }
         }
 
         /* ===== PRELOADER ===== */
@@ -187,52 +249,80 @@
         }
 
         @keyframes preloaderSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes preloaderPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.06); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.06);
+            }
         }
 
         @keyframes preloaderBar {
-            0% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
-            100% { transform: translateX(250%); }
+            0% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(250%);
+            }
         }
 
         /* ===== NAVBAR ===== */
         .navbar {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 100;
             padding: 0;
-            background: rgba(255,255,255,0.92);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-light);
             transition: box-shadow 0.3s var(--ease);
         }
+
         .navbar.scrolled {
             box-shadow: var(--shadow-sm);
         }
+
         .navbar-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 60px;
         }
+
         .navbar-brand {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .navbar-logo {
-            width: 36px; height: 36px;
+            width: 36px;
+            height: 36px;
             border-radius: var(--radius-sm);
             object-fit: contain;
         }
+
         .brand-text {
             font-family: var(--font-display);
             font-size: 1.15rem;
@@ -240,7 +330,10 @@
             color: var(--text-primary);
             letter-spacing: -0.3px;
         }
-        .brand-text span { color: var(--accent-orange); }
+
+        .brand-text span {
+            color: var(--accent-orange);
+        }
 
         .nav-order-btn {
             display: inline-flex;
@@ -255,8 +348,16 @@
             letter-spacing: 0.2px;
             transition: background 0.2s var(--ease), transform 0.15s var(--ease);
         }
-        .nav-order-btn:active { transform: scale(0.96); background: var(--accent-orange-hover); }
-        .nav-order-btn svg { width: 15px; height: 15px; }
+
+        .nav-order-btn:active {
+            transform: scale(0.96);
+            background: var(--accent-orange-hover);
+        }
+
+        .nav-order-btn svg {
+            width: 15px;
+            height: 15px;
+        }
 
         /* ===== HERO (IMAGE ONLY) ===== */
         .hero {
@@ -265,20 +366,24 @@
             overflow: hidden;
             background: var(--white);
         }
+
         .hero-carousel {
             position: relative;
             width: 100%;
             overflow: hidden;
         }
+
         .hero-track {
             display: flex;
             transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             will-change: transform;
         }
+
         .hero-slide {
             min-width: 100%;
             position: relative;
         }
+
         .hero-slide img {
             width: 100%;
             height: 72vw;
@@ -290,11 +395,14 @@
         /* Thin progress bar at bottom of hero */
         .hero-progress {
             position: absolute;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 3px;
             background: var(--border-light);
             z-index: 10;
         }
+
         .hero-progress-bar {
             height: 100%;
             background: var(--accent);
@@ -310,8 +418,10 @@
             padding: 14px 0;
             background: var(--white);
         }
+
         .hero-dot {
-            width: 7px; height: 7px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background: var(--border);
             border: none;
@@ -319,6 +429,7 @@
             transition: all 0.3s var(--ease);
             cursor: pointer;
         }
+
         .hero-dot.active {
             width: 22px;
             border-radius: 4px;
@@ -332,18 +443,24 @@
             border-top: 1px solid var(--border-light);
             background: var(--white);
         }
+
         .info-item {
             text-align: center;
             padding: 16px 8px;
             border-right: 1px solid var(--border-light);
         }
-        .info-item:last-child { border-right: none; }
+
+        .info-item:last-child {
+            border-right: none;
+        }
+
         .info-value {
             font-family: var(--font-display);
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--accent-orange);
         }
+
         .info-label {
             font-size: 0.65rem;
             color: var(--text-muted);
@@ -357,9 +474,11 @@
         .section {
             padding: 56px 0;
         }
+
         .section-header {
             margin-bottom: 32px;
         }
+
         .section-overline {
             font-size: 0.7rem;
             font-weight: 600;
@@ -368,6 +487,7 @@
             color: var(--accent-orange);
             margin-bottom: 8px;
         }
+
         .section-title {
             font-family: var(--font-display);
             font-size: clamp(1.6rem, 5.5vw, 2.2rem);
@@ -376,14 +496,17 @@
             line-height: 1.2;
             letter-spacing: -0.5px;
         }
+
         .section-desc {
             font-size: 0.9rem;
             color: var(--text-secondary);
             margin-top: 8px;
             line-height: 1.6;
         }
+
         .section-divider {
-            width: 40px; height: 2px;
+            width: 40px;
+            height: 2px;
             background: var(--accent);
             margin-top: 14px;
             border-radius: 1px;
@@ -401,7 +524,10 @@
             margin-bottom: 24px;
             scrollbar-width: none;
         }
-        .product-pills::-webkit-scrollbar { display: none; }
+
+        .product-pills::-webkit-scrollbar {
+            display: none;
+        }
 
         .pill-btn {
             display: inline-flex;
@@ -419,7 +545,9 @@
             transition: all 0.25s var(--ease);
             flex-shrink: 0;
         }
-        .pill-btn.active, .pill-btn:hover {
+
+        .pill-btn.active,
+        .pill-btn:hover {
             background: var(--accent);
             border-color: var(--accent);
             color: var(--white);
@@ -434,7 +562,10 @@
             margin-bottom: 20px;
             transition: box-shadow 0.3s var(--ease), transform 0.25s var(--ease);
         }
-        .product-card:active { transform: scale(0.985); }
+
+        .product-card:active {
+            transform: scale(0.985);
+        }
 
         .product-card.highlight {
             border-color: var(--accent);
@@ -445,19 +576,22 @@
             position: relative;
             overflow: hidden;
         }
+
         .product-img-wrap img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             transition: transform 0.5s var(--ease);
         }
+
         .product-card:hover .product-img-wrap img {
             transform: scale(1.04);
         }
 
         .product-tag {
             position: absolute;
-            top: 12px; left: 12px;
+            top: 12px;
+            left: 12px;
             padding: 4px 12px;
             background: var(--accent);
             color: var(--white);
@@ -468,6 +602,7 @@
             border-radius: var(--radius-full);
             z-index: 2;
         }
+
         .product-tag.premium {
             background: var(--amber);
         }
@@ -475,6 +610,7 @@
         .product-body {
             padding: 18px;
         }
+
         .product-name {
             font-family: var(--font-display);
             font-size: 1.2rem;
@@ -482,38 +618,48 @@
             color: var(--text-primary);
             margin-bottom: 2px;
         }
+
         .product-spec {
             font-size: 0.8rem;
             color: var(--text-muted);
             margin-bottom: 14px;
+            white-space: nowrap;
         }
 
         .price-row {
             display: flex;
-            align-items: baseline;
-            gap: 10px;
+            align-items: center;
+            gap: 8px;
             margin-bottom: 14px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
         }
+
         .price-now {
             font-family: var(--font-display);
-            font-size: 1.75rem;
+            font-size: 1.65rem;
             font-weight: 800;
             color: var(--price-green);
+            white-space: nowrap;
         }
+
         .price-was {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
             text-decoration: line-through;
+            white-space: nowrap;
         }
+
         .price-badge {
             display: inline-block;
-            padding: 3px 10px;
+            padding: 3px 8px;
             background: #E6F4EC;
             color: var(--price-green);
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             font-weight: 700;
             border-radius: var(--radius-full);
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
         }
 
         .product-features-list {
@@ -522,6 +668,7 @@
             gap: 6px;
             margin-bottom: 18px;
         }
+
         .product-features-list li {
             display: inline-flex;
             align-items: center;
@@ -532,8 +679,10 @@
             background: var(--bg);
             border-radius: var(--radius-full);
         }
+
         .product-features-list li svg {
-            width: 13px; height: 13px;
+            width: 13px;
+            height: 13px;
             color: var(--accent);
             flex-shrink: 0;
         }
@@ -553,8 +702,16 @@
             transition: background 0.2s var(--ease), transform 0.15s var(--ease);
             letter-spacing: 0.2px;
         }
-        .btn-order:active { transform: scale(0.97); background: var(--accent-orange-hover); }
-        .btn-order svg { width: 18px; height: 18px; }
+
+        .btn-order:active {
+            transform: scale(0.97);
+            background: var(--accent-orange-hover);
+        }
+
+        .btn-order svg {
+            width: 18px;
+            height: 18px;
+        }
 
         /* ===== FEATURES GRID ===== */
         .features-grid {
@@ -562,6 +719,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
+
         .feature-card {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -570,10 +728,14 @@
             text-align: center;
             transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
         }
-        .feature-card:active { border-color: var(--accent); }
+
+        .feature-card:active {
+            border-color: var(--accent);
+        }
 
         .feature-icon {
-            width: 44px; height: 44px;
+            width: 44px;
+            height: 44px;
             margin: 0 auto 10px;
             display: flex;
             align-items: center;
@@ -581,10 +743,26 @@
             border-radius: var(--radius-md);
             transition: transform 0.2s var(--ease);
         }
-        .feature-icon.i1 { background: var(--accent-light); color: var(--accent); }
-        .feature-icon.i2 { background: #EEF0FF; color: #3B82F6; }
-        .feature-icon.i3 { background: var(--accent-orange-light); color: var(--accent-orange); }
-        .feature-icon.i4 { background: #E8F8EE; color: #10B981; }
+
+        .feature-icon.i1 {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .feature-icon.i2 {
+            background: #EEF0FF;
+            color: #3B82F6;
+        }
+
+        .feature-icon.i3 {
+            background: var(--accent-orange-light);
+            color: var(--accent-orange);
+        }
+
+        .feature-icon.i4 {
+            background: #E8F8EE;
+            color: #10B981;
+        }
 
         .feature-name {
             font-size: 0.85rem;
@@ -592,6 +770,7 @@
             color: var(--text-primary);
             margin-bottom: 4px;
         }
+
         .feature-text {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -608,56 +787,71 @@
             position: relative;
             overflow: hidden;
         }
+
         .banner-card::before {
             content: '';
             position: absolute;
-            width: 160px; height: 160px;
-            background: rgba(255,255,255,0.06);
+            width: 160px;
+            height: 160px;
+            background: rgba(255, 255, 255, 0.06);
             border-radius: 50%;
-            top: -60px; right: -40px;
+            top: -60px;
+            right: -40px;
         }
+
         .banner-card::after {
             content: '';
             position: absolute;
-            width: 100px; height: 100px;
-            background: rgba(255,255,255,0.04);
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.04);
             border-radius: 50%;
-            bottom: -30px; left: -20px;
+            bottom: -30px;
+            left: -20px;
         }
+
         .banner-icon {
-            width: 52px; height: 52px;
+            width: 52px;
+            height: 52px;
             margin: 0 auto 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             border-radius: 50%;
             color: var(--white);
-            position: relative; z-index: 2;
+            position: relative;
+            z-index: 2;
         }
+
         .banner-title {
             font-family: var(--font-display);
             font-size: 1.35rem;
             font-weight: 700;
             margin-bottom: 6px;
-            position: relative; z-index: 2;
+            position: relative;
+            z-index: 2;
         }
+
         .banner-desc {
             font-size: 0.85rem;
             opacity: 0.85;
-            position: relative; z-index: 2;
+            position: relative;
+            z-index: 2;
             margin-bottom: 12px;
         }
+
         .banner-badge {
             display: inline-block;
             padding: 6px 18px;
-            background: rgba(255,255,255,0.18);
-            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             color: var(--white);
             font-weight: 700;
             font-size: 0.95rem;
             border-radius: var(--radius-full);
-            position: relative; z-index: 2;
+            position: relative;
+            z-index: 2;
             letter-spacing: 0.5px;
         }
 
@@ -671,7 +865,10 @@
             padding-bottom: 8px;
             scrollbar-width: none;
         }
-        .testimonials-scroll::-webkit-scrollbar { display: none; }
+
+        .testimonials-scroll::-webkit-scrollbar {
+            display: none;
+        }
 
         .testimonial-card {
             min-width: 82%;
@@ -681,12 +878,14 @@
             border-radius: var(--radius-md);
             padding: 22px 18px;
         }
+
         .t-stars {
             color: var(--accent-orange);
             font-size: 0.75rem;
             letter-spacing: 2px;
             margin-bottom: 10px;
         }
+
         .t-text {
             font-size: 0.88rem;
             color: var(--text-secondary);
@@ -694,13 +893,16 @@
             line-height: 1.7;
             margin-bottom: 16px;
         }
+
         .t-author {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .t-avatar {
-            width: 36px; height: 36px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: var(--accent-light);
             color: var(--accent);
@@ -710,8 +912,17 @@
             font-weight: 700;
             font-size: 0.8rem;
         }
-        .t-name { font-weight: 700; font-size: 0.8rem; color: var(--text-primary); }
-        .t-role { font-size: 0.68rem; color: var(--text-muted); }
+
+        .t-name {
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .t-role {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+        }
 
         .swipe-hint {
             text-align: center;
@@ -723,7 +934,11 @@
             justify-content: center;
             gap: 4px;
         }
-        .swipe-hint svg { width: 14px; height: 14px; }
+
+        .swipe-hint svg {
+            width: 14px;
+            height: 14px;
+        }
 
         /* ===== FAQ ===== */
         .faq-item {
@@ -734,7 +949,10 @@
             overflow: hidden;
             transition: border-color 0.2s var(--ease);
         }
-        .faq-item[open] { border-color: var(--accent); }
+
+        .faq-item[open] {
+            border-color: var(--accent);
+        }
 
         .faq-item summary {
             list-style: none;
@@ -748,10 +966,14 @@
             font-weight: 600;
             color: var(--text-primary);
         }
-        .faq-item summary::-webkit-details-marker { display: none; }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
 
         .faq-chevron {
-            width: 22px; height: 22px;
+            width: 22px;
+            height: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -762,6 +984,7 @@
             font-size: 0.7rem;
             color: var(--text-muted);
         }
+
         .faq-item[open] .faq-chevron {
             transform: rotate(45deg);
             background: var(--accent-orange-light);
@@ -784,6 +1007,7 @@
             text-align: center;
             margin-bottom: 12px;
         }
+
         .c-name {
             font-family: var(--font-display);
             font-size: 1.05rem;
@@ -791,12 +1015,16 @@
             color: var(--text-primary);
             margin-bottom: 2px;
         }
+
         .c-phone {
             font-size: 0.82rem;
             color: var(--text-muted);
             margin-bottom: 14px;
         }
-        .c-phone a { color: var(--text-muted); }
+
+        .c-phone a {
+            color: var(--text-muted);
+        }
 
         .btn-wa {
             display: flex;
@@ -812,8 +1040,16 @@
             border-radius: var(--radius-md);
             transition: background 0.2s var(--ease), transform 0.15s var(--ease);
         }
-        .btn-wa:active { background: var(--whatsapp-hover); transform: scale(0.97); }
-        .btn-wa svg { width: 18px; height: 18px; }
+
+        .btn-wa:active {
+            background: var(--whatsapp-hover);
+            transform: scale(0.97);
+        }
+
+        .btn-wa svg {
+            width: 18px;
+            height: 18px;
+        }
 
         .btn-map {
             display: flex;
@@ -831,8 +1067,17 @@
             margin-top: 12px;
             transition: background 0.2s var(--ease), transform 0.15s var(--ease);
         }
-        .btn-map:active { background: var(--border-light); transform: scale(0.97); }
-        .btn-map svg { width: 18px; height: 18px; color: var(--accent-orange); }
+
+        .btn-map:active {
+            background: var(--border-light);
+            transform: scale(0.97);
+        }
+
+        .btn-map svg {
+            width: 18px;
+            height: 18px;
+            color: var(--accent-orange);
+        }
 
         /* ===== FOOTER ===== */
         .footer {
@@ -841,6 +1086,7 @@
             text-align: center;
             background: var(--white);
         }
+
         .footer-brand {
             display: flex;
             align-items: center;
@@ -848,14 +1094,24 @@
             gap: 8px;
             margin-bottom: 6px;
         }
-        .footer-brand img { width: 28px; height: 28px; border-radius: 6px; }
+
+        .footer-brand img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+        }
+
         .footer-brand-text {
             font-family: var(--font-display);
             font-size: 0.95rem;
             font-weight: 700;
             color: var(--text-primary);
         }
-        .footer-brand-text span { color: var(--accent-orange); }
+
+        .footer-brand-text span {
+            color: var(--accent-orange);
+        }
+
         .footer-copy {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -864,8 +1120,10 @@
         /* ===== FLOATING WHATSAPP ===== */
         .fab-wa {
             position: fixed;
-            bottom: 20px; right: 18px;
-            width: 52px; height: 52px;
+            bottom: 20px;
+            right: 18px;
+            width: 52px;
+            height: 52px;
             background: var(--whatsapp);
             border-radius: 50%;
             display: flex;
@@ -875,8 +1133,16 @@
             z-index: 90;
             transition: transform 0.15s var(--ease);
         }
-        .fab-wa:active { transform: scale(0.9); }
-        .fab-wa svg { width: 26px; height: 26px; fill: white; }
+
+        .fab-wa:active {
+            transform: scale(0.9);
+        }
+
+        .fab-wa svg {
+            width: 26px;
+            height: 26px;
+            fill: white;
+        }
 
         /* ===== ORDER MODAL ===== */
         .modal-overlay {
@@ -884,14 +1150,17 @@
             position: fixed;
             inset: 0;
             z-index: 1000;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
             align-items: flex-end;
             justify-content: center;
             animation: fadeIn 0.2s ease;
         }
-        .modal-overlay.active { display: flex; }
+
+        .modal-overlay.active {
+            display: flex;
+        }
 
         .modal-sheet {
             width: 100%;
@@ -903,25 +1172,31 @@
             padding: 8px 22px 36px;
             animation: slideUp 0.35s var(--ease);
         }
+
         .modal-handle {
-            width: 36px; height: 4px;
+            width: 36px;
+            height: 4px;
             background: var(--border);
             border-radius: 2px;
             margin: 0 auto 18px;
         }
+
         .modal-head {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 20px;
         }
+
         .modal-title {
             font-family: var(--font-display);
             font-size: 1.2rem;
             font-weight: 700;
         }
+
         .modal-close {
-            width: 32px; height: 32px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -933,7 +1208,10 @@
             cursor: pointer;
         }
 
-        .form-group { margin-bottom: 14px; }
+        .form-group {
+            margin-bottom: 14px;
+        }
+
         .form-label {
             display: block;
             font-size: 0.75rem;
@@ -941,6 +1219,7 @@
             color: var(--text-secondary);
             margin-bottom: 5px;
         }
+
         .form-input {
             width: 100%;
             padding: 12px 14px;
@@ -953,10 +1232,20 @@
             outline: none;
             transition: border-color 0.2s var(--ease);
         }
-        .form-input:focus { border-color: var(--accent); }
-        .form-input::placeholder { color: var(--text-muted); }
 
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .form-input:focus {
+            border-color: var(--accent);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
 
         .btn-submit-wa {
             display: flex;
@@ -973,8 +1262,16 @@
             margin-top: 20px;
             transition: background 0.2s var(--ease), transform 0.15s var(--ease);
         }
-        .btn-submit-wa:active { background: var(--whatsapp-hover); transform: scale(0.97); }
-        .btn-submit-wa svg { width: 22px; height: 22px; }
+
+        .btn-submit-wa:active {
+            background: var(--whatsapp-hover);
+            transform: scale(0.97);
+        }
+
+        .btn-submit-wa svg {
+            width: 22px;
+            height: 22px;
+        }
 
         .form-note {
             text-align: center;
@@ -990,6 +1287,7 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
             }
+
             .product-card {
                 margin-bottom: 0;
                 border-radius: var(--radius-md);
@@ -997,51 +1295,69 @@
                 display: flex;
                 flex-direction: column;
             }
+
             .product-card.highlight {
                 border-color: var(--accent-orange);
             }
+
             .product-img-wrap img {
                 height: 145px;
             }
+
             .product-tag {
-                top: 8px; left: 8px;
+                top: 8px;
+                left: 8px;
                 padding: 3px 8px;
                 font-size: 0.55rem;
             }
+
             .product-body {
                 padding: 12px 10px;
                 display: flex;
                 flex-direction: column;
                 flex-grow: 1;
             }
+
             .product-name {
                 font-size: 0.95rem;
                 line-height: 1.2;
                 margin-bottom: 2px;
             }
+
             .product-spec {
                 font-size: 0.7rem;
                 margin-bottom: 8px;
+                white-space: nowrap;
             }
+
             .price-row {
-                gap: 6px;
+                gap: 4px;
                 margin-bottom: 10px;
-                flex-wrap: wrap;
-                align-items: baseline;
+                flex-wrap: nowrap;
+                align-items: center;
+                white-space: nowrap;
             }
+
             .price-now {
-                font-size: 1.3rem;
+                font-size: 1.15rem;
+                white-space: nowrap;
             }
+
             .price-was {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
+                white-space: nowrap;
             }
+
             .price-badge {
-                font-size: 0.58rem;
-                padding: 2px 6px;
+                font-size: 0.52rem;
+                padding: 2px 5px;
+                white-space: nowrap;
             }
+
             .product-features-list {
                 display: none;
             }
+
             .btn-order {
                 margin-top: auto;
                 padding: 9px 6px;
@@ -1049,30 +1365,69 @@
                 border-radius: var(--radius-sm);
                 gap: 4px;
             }
+
             .btn-order svg {
                 width: 14px;
                 height: 14px;
             }
+
             .product-deck-dots {
                 display: none;
             }
         }
+
         @media (min-width: 768px) {
-            .product-pills { justify-content: center; }
-            .hero-slide img { height: 55vw; max-height: 480px; }
-            .features-grid { grid-template-columns: repeat(4, 1fr); }
-            .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-            .product-card { margin-bottom: 0; }
-            .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-            .contact-card { margin-bottom: 0; }
-            .testimonial-card { min-width: 46%; }
-            .modal-sheet { border-radius: var(--radius-xl); margin-bottom: 30px; }
+            .product-pills {
+                justify-content: center;
+            }
+
+            .hero-slide img {
+                height: 55vw;
+                max-height: 480px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .products-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .product-card {
+                margin-bottom: 0;
+            }
+
+            .contact-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .contact-card {
+                margin-bottom: 0;
+            }
+
+            .testimonial-card {
+                min-width: 46%;
+            }
+
+            .modal-sheet {
+                border-radius: var(--radius-xl);
+                margin-bottom: 30px;
+            }
         }
+
         @media (min-width: 1024px) {
-            .products-grid { grid-template-columns: repeat(3, 1fr); }
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- PRELOADER -->
@@ -1098,7 +1453,10 @@
                 <div class="brand-text">Notebook <span>Wallah</span></div>
             </a>
             <a href="#products" class="nav-order-btn">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
                 Order
             </a>
         </div>
@@ -1109,10 +1467,13 @@
         <div class="hero-carousel">
             <div class="hero-track" id="heroTrack">
                 <div class="hero-slide"><img src="notebooks-on-desk.jpg" alt="Premium notebook collection"></div>
-                <div class="hero-slide"><img src="notebook-stack-talent-cover.jpg" alt="Stacked notebooks with stylish covers"></div>
+                <div class="hero-slide"><img src="notebook-stack-talent-cover.jpg"
+                        alt="Stacked notebooks with stylish covers"></div>
                 <div class="hero-slide"><img src="notebooks-fanned-out.jpg" alt="Variety of notebook designs"></div>
             </div>
-            <div class="hero-progress"><div class="hero-progress-bar" id="heroProgressBar"></div></div>
+            <div class="hero-progress">
+                <div class="hero-progress-bar" id="heroProgressBar"></div>
+            </div>
         </div>
         <div class="hero-dots" id="heroDots">
             <button class="hero-dot active" data-i="0" aria-label="Slide 1"></button>
@@ -1167,12 +1528,21 @@
                             <span class="price-badge">SAVE 43%</span>
                         </div>
                         <ul class="product-features-list">
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> 70 GSM</li>
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Bleed-proof</li>
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Durable</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> 70 GSM</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> Bleed-proof</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> Durable</li>
                         </ul>
                         <button class="btn-order" onclick="openModal('Ganga Notebook – 172 Pages',40)">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                             Order — ₹40
                         </button>
                     </div>
@@ -1193,12 +1563,21 @@
                             <span class="price-badge">SAVE 36%</span>
                         </div>
                         <ul class="product-features-list">
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> 200 Pages</li>
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Best Value</li>
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Smooth</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> 200 Pages</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> Best Value</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> Smooth</li>
                         </ul>
                         <button class="btn-order" onclick="openModal('Fusion Notebook – 200 Pages',45)">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                             Order — ₹45
                         </button>
                     </div>
@@ -1219,12 +1598,21 @@
                             <span class="price-badge">SAVE 50%</span>
                         </div>
                         <ul class="product-features-list">
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Premium</li>
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Ultra Smooth</li>
-                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> 50% Off</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> Premium</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> Ultra Smooth</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> 50% Off</li>
                         </ul>
                         <button class="btn-order" onclick="openModal('CA Books – 172 Pages (Premium)',45)">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                             Order — ₹45
                         </button>
                     </div>
@@ -1250,28 +1638,52 @@
             <div class="features-grid">
                 <div class="feature-card reveal">
                     <div class="feature-icon i1">
-                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <h3 class="feature-name">Superior Paper</h3>
                     <p class="feature-text">70 GSM bleed-proof pages for smooth writing</p>
                 </div>
                 <div class="feature-card reveal" style="transition-delay:60ms;">
                     <div class="feature-icon i2">
-                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 6h6M9 10h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M9 6h6M9 10h6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <h3 class="feature-name">Strong Binding</h3>
                     <p class="feature-text">Durable stitching that lasts all semester</p>
                 </div>
                 <div class="feature-card reveal" style="transition-delay:120ms;">
                     <div class="feature-icon i3">
-                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM16.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM7.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM9 14.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M12 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM16.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM7.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM9 14.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <h3 class="feature-name">Stylish Covers</h3>
                     <p class="feature-text">Modern designs that match your style</p>
                 </div>
                 <div class="feature-card reveal" style="transition-delay:180ms;">
                     <div class="feature-icon i4">
-                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22s3.5-5.5 8-8.5c5-3.5 11.5-3.5 11.5-3.5s0 6.5-3.5 11.5C15 20.5 9.5 24 9.5 24" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 13.5L2 22" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M2 22s3.5-5.5 8-8.5c5-3.5 11.5-3.5 11.5-3.5s0 6.5-3.5 11.5C15 20.5 9.5 24 9.5 24"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10 13.5L2 22" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <h3 class="feature-name">Eco-Friendly</h3>
                     <p class="feature-text">Responsibly sourced forest paper</p>
@@ -1285,7 +1697,10 @@
         <div class="container">
             <div class="banner-card reveal">
                 <div class="banner-icon">
-                    <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </div>
                 <h3 class="banner-title">Wholesale Offer for Students!</h3>
                 <p class="banner-desc">Order 12+ notebooks and get special bulk pricing</p>
@@ -1305,31 +1720,45 @@
             <div class="testimonials-scroll">
                 <div class="testimonial-card reveal">
                     <div class="t-stars">★★★★★</div>
-                    <p class="t-text">"The paper quality is amazing! My pen just glides on the page, and there's no ink bleeding through. Finally, a notebook worth the price."</p>
+                    <p class="t-text">"The paper quality is amazing! My pen just glides on the page, and there's no ink
+                        bleeding through. Finally, a notebook worth the price."</p>
                     <div class="t-author">
                         <div class="t-avatar">R</div>
-                        <div><div class="t-name">Rohan S.</div><div class="t-role">Engineering Student</div></div>
+                        <div>
+                            <div class="t-name">Rohan S.</div>
+                            <div class="t-role">Engineering Student</div>
+                        </div>
                     </div>
                 </div>
                 <div class="testimonial-card reveal" style="transition-delay:80ms;">
                     <div class="t-stars">★★★★★</div>
-                    <p class="t-text">"I love the cover designs. The binding is really strong and has survived my packed bag all semester. Great value for money!"</p>
+                    <p class="t-text">"I love the cover designs. The binding is really strong and has survived my packed
+                        bag all semester. Great value for money!"</p>
                     <div class="t-author">
                         <div class="t-avatar">P</div>
-                        <div><div class="t-name">Priya K.</div><div class="t-role">Commerce Student</div></div>
+                        <div>
+                            <div class="t-name">Priya K.</div>
+                            <div class="t-role">Commerce Student</div>
+                        </div>
                     </div>
                 </div>
                 <div class="testimonial-card reveal" style="transition-delay:160ms;">
                     <div class="t-stars">★★★★★</div>
-                    <p class="t-text">"Best value for money, every rupee counts as a student. Notebook Wallah delivers on both quality and affordability. Highly recommended!"</p>
+                    <p class="t-text">"Best value for money, every rupee counts as a student. Notebook Wallah delivers
+                        on both quality and affordability. Highly recommended!"</p>
                     <div class="t-author">
                         <div class="t-avatar">A</div>
-                        <div><div class="t-name">Arjun M.</div><div class="t-role">Science Student</div></div>
+                        <div>
+                            <div class="t-name">Arjun M.</div>
+                            <div class="t-role">Science Student</div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="swipe-hint">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-4-4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M5 12h14m-4-4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
                 Swipe for more
             </div>
         </div>
@@ -1346,19 +1775,23 @@
             <div>
                 <details class="faq-item reveal">
                     <summary>Is there a minimum order quantity?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">No minimum order! Buy even one notebook. For orders of 12+, ask about our special wholesale (cost-to-cost) pricing.</p>
+                    <p class="faq-answer">No minimum order! Buy even one notebook. For orders of 12+, ask about our
+                        special wholesale (cost-to-cost) pricing.</p>
                 </details>
                 <details class="faq-item reveal" style="transition-delay:60ms;">
                     <summary>Do you offer delivery?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">Currently pickup-only from our Pune location. Visit us after 5 PM or tap "Get Directions" below. Delivery options coming soon!</p>
+                    <p class="faq-answer">Currently pickup-only from our Pune location. Visit us after 5 PM or tap "Get
+                        Directions" below. Delivery options coming soon!</p>
                 </details>
                 <details class="faq-item reveal" style="transition-delay:120ms;">
                     <summary>What is the paper quality?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">Our notebooks use 70 GSM paper from eco-friendly, responsibly managed forests. Thick enough to prevent ink bleeding, providing a smooth writing experience.</p>
+                    <p class="faq-answer">Our notebooks use 70 GSM paper from eco-friendly, responsibly managed forests.
+                        Thick enough to prevent ink bleeding, providing a smooth writing experience.</p>
                 </details>
                 <details class="faq-item reveal" style="transition-delay:180ms;">
                     <summary>What's the difference between the 3 types?<span class="faq-chevron">+</span></summary>
-                    <p class="faq-answer">Ganga (172 pages, ₹40) — classic everyday. Fusion (200 pages, ₹45) — best value with extra pages. CA Books (172 pages, ₹45) — premium paper for the smoothest writing.</p>
+                    <p class="faq-answer">Ganga (172 pages, ₹40) — classic everyday. Fusion (200 pages, ₹45) — best
+                        value with extra pages. CA Books (172 pages, ₹45) — premium paper for the smoothest writing.</p>
                 </details>
             </div>
         </div>
@@ -1377,22 +1810,35 @@
                 <div class="contact-card reveal">
                     <div class="c-name">Atharv Jadhav</div>
                     <div class="c-phone"><a href="tel:7796711431">7796711431</a></div>
-                    <a href="https://wa.me/917796711431?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah." target="_blank" rel="noopener noreferrer" class="btn-wa">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+                    <a href="https://wa.me/917796711431?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
+                        target="_blank" rel="noopener noreferrer" class="btn-wa">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+                        </svg>
                         WhatsApp
                     </a>
                 </div>
                 <div class="contact-card reveal" style="transition-delay:80ms;">
                     <div class="c-name">Pankaj Shinde</div>
                     <div class="c-phone"><a href="tel:8788364740">8788364740</a></div>
-                    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah." target="_blank" rel="noopener noreferrer" class="btn-wa">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+                    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
+                        target="_blank" rel="noopener noreferrer" class="btn-wa">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+                        </svg>
                         WhatsApp
                     </a>
                 </div>
             </div>
-            <a href="https://maps.app.goo.gl/8VAYwAFPrsnDFqv16?g_st=aw" target="_blank" rel="noopener noreferrer" class="btn-map reveal" style="transition-delay:120ms;">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="https://maps.app.goo.gl/8VAYwAFPrsnDFqv16?g_st=aw" target="_blank" rel="noopener noreferrer"
+                class="btn-map reveal" style="transition-delay:120ms;">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
                 Get Directions — Pune
             </a>
         </div>
@@ -1433,7 +1879,10 @@
                     </div>
                 </div>
                 <button type="button" class="btn-submit-wa" onclick="submitOrder()">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+                    </svg>
                     Send Order via WhatsApp
                 </button>
             </form>
@@ -1442,8 +1891,12 @@
     </div>
 
     <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah." target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah."
+        target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z" />
+        </svg>
     </a>
 
     <script>
@@ -1595,4 +2048,5 @@
         }
     </script>
 </body>
+
 </html>
