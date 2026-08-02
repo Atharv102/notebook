@@ -2,540 +2,1597 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Faster | Premium Student Notebooks</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Notebook Wallah | Premium Student Notebooks at Best Prices in Pune</title>
+    <meta name="description" content="Notebook Wallah — Premium quality student notebooks at unbeatable prices. Ganga, Fusion & CA Books. Order via WhatsApp in Pune.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F8F9FA; /* A very light grey background */
-            color: #1A202C; /* Darker text for better contrast */
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 400px;
-        }
-        @media (max-width: 640px) {
-            .chart-container {
-                height: 300px;
-            }
-        }
-        /* Sticky Navigation with blur effect */
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.7);
-        }
-        /* Navigation link styles */
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease-in-out;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #2563eb;
-            transition: width 0.3s ease-in-out;
-        }
-        .nav-link:hover::after, .nav-link-active::after {
-            width: 100%;
-        }
-        .nav-link-active {
-            color: #2563eb;
-            font-weight: 600;
-        }
-        /* Lightbox for gallery */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s ease;
-        }
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 85%;
-            animation: zoomIn 0.3s ease;
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 45px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-        .lightbox-close:hover {
-            transform: scale(1.1);
-        }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes zoomIn { from { transform: scale(0.8); } to { transform: scale(1); } }
-        
-        /* Improved FAQ Accordion */
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] summary .arrow-icon { transform: rotate(180deg); }
-        .arrow-icon { transition: transform 0.3s ease-in-out; }
+        /* ===== RESET ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Scroll-triggered Animations */
+        :root {
+            --white: #FFFFFF;
+            --bg: #FAFAF9;
+            --bg-warm: #F3F1ED;
+            --surface: #FFFFFF;
+            --border: #E5E2DC;
+            --border-light: #EFECEA;
+            --text-primary: #1B2A4A;
+            --text-secondary: #4A5568;
+            --text-muted: #8A9AB5;
+            --accent: #1B2A4A;
+            --accent-light: #E8ECF4;
+            --accent-hover: #142240;
+            --accent-orange: #E07B2D;
+            --accent-orange-light: #FDF0E4;
+            --accent-orange-hover: #CC6A22;
+            --price-green: #1B7A3D;
+            --price-red: #CC3333;
+            --amber: #E07B2D;
+            --amber-light: #FDF0E4;
+            --whatsapp: #25D366;
+            --whatsapp-hover: #1EBE57;
+            --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+            --shadow-xl: 0 16px 48px rgba(0,0,0,0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-full: 9999px;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        button { border: none; cursor: pointer; font-family: inherit; background: none; }
+        ul { list-style: none; }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        @media (min-width: 768px) { .container { max-width: 720px; } }
+        @media (min-width: 1024px) { .container { max-width: 960px; } }
+
+        /* ===== ANIMATIONS ===== */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(28px);
+            transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
         }
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { transform: scale(1.08); }
+            to { transform: scale(1); }
+        }
+
+        /* ===== PRELOADER ===== */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s var(--ease), visibility 0.5s var(--ease);
+        }
+
+        #preloader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .preloader-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .preloader-logo-wrap {
+            position: relative;
+            width: 76px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preloader-logo-wrap img {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+            animation: preloaderPulse 1.8s ease-in-out infinite;
+        }
+
+        .preloader-spinner {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid var(--border-light);
+            border-top-color: var(--accent-orange);
+            border-right-color: var(--accent);
+            animation: preloaderSpin 1s linear infinite;
+        }
+
+        .preloader-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+        }
+
+        .preloader-title span {
+            color: var(--accent-orange);
+        }
+
+        .preloader-subtitle {
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--text-muted);
+        }
+
+        .preloader-bar-wrap {
+            width: 140px;
+            height: 3px;
+            background: var(--border-light);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 16px;
+        }
+
+        .preloader-bar {
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-orange) 100%);
+            border-radius: 2px;
+            animation: preloaderBar 1.4s ease-in-out infinite;
+        }
+
+        @keyframes preloaderSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes preloaderPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+
+        @keyframes preloaderBar {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(250%); }
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 0;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            transition: box-shadow 0.3s var(--ease);
+        }
+        .navbar.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar-logo {
+            width: 36px; height: 36px;
+            border-radius: var(--radius-sm);
+            object-fit: contain;
+        }
+        .brand-text {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+        }
+        .brand-text span { color: var(--accent-orange); }
+
+        .nav-order-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 18px;
+            background: var(--accent-orange);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            letter-spacing: 0.2px;
+            transition: background 0.2s var(--ease), transform 0.15s var(--ease);
+        }
+        .nav-order-btn:active { transform: scale(0.96); background: var(--accent-orange-hover); }
+        .nav-order-btn svg { width: 15px; height: 15px; }
+
+        /* ===== HERO (IMAGE ONLY) ===== */
+        .hero {
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+            background: var(--white);
+        }
+        .hero-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .hero-track {
+            display: flex;
+            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+        }
+        .hero-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        .hero-slide img {
+            width: 100%;
+            height: 72vw;
+            max-height: 420px;
+            object-fit: cover;
+            animation: scaleIn 0.8s var(--ease);
+        }
+
+        /* Thin progress bar at bottom of hero */
+        .hero-progress {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--border-light);
+            z-index: 10;
+        }
+        .hero-progress-bar {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* Slide indicator dots */
+        .hero-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 0;
+            background: var(--white);
+        }
+        .hero-dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--border);
+            border: none;
+            padding: 0;
+            transition: all 0.3s var(--ease);
+            cursor: pointer;
+        }
+        .hero-dot.active {
+            width: 22px;
+            border-radius: 4px;
+            background: var(--accent);
+        }
+
+        /* ===== QUICK INFO STRIP ===== */
+        .info-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--border-light);
+            background: var(--white);
+        }
+        .info-item {
+            text-align: center;
+            padding: 16px 8px;
+            border-right: 1px solid var(--border-light);
+        }
+        .info-item:last-child { border-right: none; }
+        .info-value {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+        .info-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 2px;
+        }
+
+        /* ===== SECTION STYLING ===== */
+        .section {
+            padding: 56px 0;
+        }
+        .section-header {
+            margin-bottom: 32px;
+        }
+        .section-overline {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-orange);
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        .section-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+        .section-divider {
+            width: 40px; height: 2px;
+            background: var(--accent);
+            margin-top: 14px;
+            border-radius: 1px;
+        }
+
+        /* ===== PRODUCT CARDS & MOBILE DECK ===== */
+        .product-pills {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 6px;
+            margin-bottom: 24px;
+            scrollbar-width: none;
+        }
+        .product-pills::-webkit-scrollbar { display: none; }
+
+        .pill-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.25s var(--ease);
+            flex-shrink: 0;
+        }
+        .pill-btn.active, .pill-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(27, 42, 74, 0.15);
+        }
+
+        .product-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s var(--ease), transform 0.25s var(--ease);
+        }
+        .product-card:active { transform: scale(0.985); }
+
+        .product-card.highlight {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent);
+        }
+
+        .product-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .product-img-wrap img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s var(--ease);
+        }
+        .product-card:hover .product-img-wrap img {
+            transform: scale(1.04);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 12px; left: 12px;
+            padding: 4px 12px;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: var(--radius-full);
+            z-index: 2;
+        }
+        .product-tag.premium {
+            background: var(--amber);
+        }
+
+        .product-body {
+            padding: 18px;
+        }
+        .product-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+        .product-spec {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .price-now {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--price-green);
+        }
+        .price-was {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+        .price-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            background: #E6F4EC;
+            color: var(--price-green);
+            font-size: 0.65rem;
+            font-weight: 700;
+            border-radius: var(--radius-full);
+            letter-spacing: 0.5px;
+        }
+
+        .product-features-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+        .product-features-list li {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            padding: 5px 10px;
+            background: var(--bg);
+            border-radius: var(--radius-full);
+        }
+        .product-features-list li svg {
+            width: 13px; height: 13px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .btn-order {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 13px;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 0.88rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            transition: background 0.2s var(--ease), transform 0.15s var(--ease);
+            letter-spacing: 0.2px;
+        }
+        .btn-order:active { transform: scale(0.97); background: var(--accent-orange-hover); }
+        .btn-order svg { width: 18px; height: 18px; }
+
+        /* ===== FEATURES GRID ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 20px 14px;
+            text-align: center;
+            transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+        }
+        .feature-card:active { border-color: var(--accent); }
+
+        .feature-icon {
+            width: 44px; height: 44px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-md);
+            transition: transform 0.2s var(--ease);
+        }
+        .feature-icon.i1 { background: var(--accent-light); color: var(--accent); }
+        .feature-icon.i2 { background: #EEF0FF; color: #3B82F6; }
+        .feature-icon.i3 { background: var(--accent-orange-light); color: var(--accent-orange); }
+        .feature-icon.i4 { background: #E8F8EE; color: #10B981; }
+
+        .feature-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        .feature-text {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ===== WHOLESALE BANNER ===== */
+        .banner-card {
+            background: var(--accent);
+            border-radius: var(--radius-lg);
+            padding: 28px 22px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-card::before {
+            content: '';
+            position: absolute;
+            width: 160px; height: 160px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 50%;
+            top: -60px; right: -40px;
+        }
+        .banner-card::after {
+            content: '';
+            position: absolute;
+            width: 100px; height: 100px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+            bottom: -30px; left: -20px;
+        }
+        .banner-icon {
+            width: 52px; height: 52px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.12);
+            border-radius: 50%;
+            color: var(--white);
+            position: relative; z-index: 2;
+        }
+        .banner-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            position: relative; z-index: 2;
+        }
+        .banner-desc {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            position: relative; z-index: 2;
+            margin-bottom: 12px;
+        }
+        .banner-badge {
+            display: inline-block;
+            padding: 6px 18px;
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: var(--radius-full);
+            position: relative; z-index: 2;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-scroll {
+            display: flex;
+            gap: 14px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+        .testimonials-scroll::-webkit-scrollbar { display: none; }
+
+        .testimonial-card {
+            min-width: 82%;
+            scroll-snap-align: start;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 22px 18px;
+        }
+        .t-stars {
+            color: var(--accent-orange);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .t-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .t-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .t-avatar {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+        .t-name { font-weight: 700; font-size: 0.8rem; color: var(--text-primary); }
+        .t-role { font-size: 0.68rem; color: var(--text-muted); }
+
+        .swipe-hint {
+            text-align: center;
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+        .swipe-hint svg { width: 14px; height: 14px; }
+
+        /* ===== FAQ ===== */
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: border-color 0.2s var(--ease);
+        }
+        .faq-item[open] { border-color: var(--accent); }
+
+        .faq-item summary {
+            list-style: none;
+            padding: 16px 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+
+        .faq-chevron {
+            width: 22px; height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            border-radius: 50%;
+            flex-shrink: 0;
+            transition: transform 0.3s var(--ease), background 0.2s var(--ease);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+        .faq-item[open] .faq-chevron {
+            transform: rotate(45deg);
+            background: var(--accent-orange-light);
+            color: var(--accent-orange);
+        }
+
+        .faq-answer {
+            padding: 0 18px 16px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 22px 18px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .c-name {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+        .c-phone {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+        .c-phone a { color: var(--text-muted); }
+
+        .btn-wa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            background: var(--whatsapp);
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            transition: background 0.2s var(--ease), transform 0.15s var(--ease);
+        }
+        .btn-wa:active { background: var(--whatsapp-hover); transform: scale(0.97); }
+        .btn-wa svg { width: 18px; height: 18px; }
+
+        .btn-map {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 13px;
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            margin-top: 12px;
+            transition: background 0.2s var(--ease), transform 0.15s var(--ease);
+        }
+        .btn-map:active { background: var(--border-light); transform: scale(0.97); }
+        .btn-map svg { width: 18px; height: 18px; color: var(--accent-orange); }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 28px 0;
+            text-align: center;
+            background: var(--white);
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .footer-brand img { width: 28px; height: 28px; border-radius: 6px; }
+        .footer-brand-text {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .footer-brand-text span { color: var(--accent-orange); }
+        .footer-copy {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .fab-wa {
+            position: fixed;
+            bottom: 20px; right: 18px;
+            width: 52px; height: 52px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 90;
+            transition: transform 0.15s var(--ease);
+        }
+        .fab-wa:active { transform: scale(0.9); }
+        .fab-wa svg { width: 26px; height: 26px; fill: white; }
+
+        /* ===== ORDER MODAL ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            align-items: flex-end;
+            justify-content: center;
+            animation: fadeIn 0.2s ease;
+        }
+        .modal-overlay.active { display: flex; }
+
+        .modal-sheet {
+            width: 100%;
+            max-width: 480px;
+            max-height: 85vh;
+            overflow-y: auto;
+            background: var(--white);
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+            padding: 8px 22px 36px;
+            animation: slideUp 0.35s var(--ease);
+        }
+        .modal-handle {
+            width: 36px; height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            margin: 0 auto 18px;
+        }
+        .modal-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .modal-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .modal-close {
+            width: 32px; height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            font-size: 1rem;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        .form-group { margin-bottom: 14px; }
+        .form-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-family: var(--font-body);
+            outline: none;
+            transition: border-color 0.2s var(--ease);
+        }
+        .form-input:focus { border-color: var(--accent); }
+        .form-input::placeholder { color: var(--text-muted); }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+        .btn-submit-wa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px;
+            background: var(--whatsapp);
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            margin-top: 20px;
+            transition: background 0.2s var(--ease), transform 0.15s var(--ease);
+        }
+        .btn-submit-wa:active { background: var(--whatsapp-hover); transform: scale(0.97); }
+        .btn-submit-wa svg { width: 22px; height: 22px; }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 767px) {
+            .products-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .product-card {
+                margin-bottom: 0;
+                border-radius: var(--radius-md);
+                box-shadow: var(--shadow-xs);
+                display: flex;
+                flex-direction: column;
+            }
+            .product-card.highlight {
+                border-color: var(--accent-orange);
+            }
+            .product-img-wrap img {
+                height: 145px;
+            }
+            .product-tag {
+                top: 8px; left: 8px;
+                padding: 3px 8px;
+                font-size: 0.55rem;
+            }
+            .product-body {
+                padding: 12px 10px;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+            .product-name {
+                font-size: 0.95rem;
+                line-height: 1.2;
+                margin-bottom: 2px;
+            }
+            .product-spec {
+                font-size: 0.7rem;
+                margin-bottom: 8px;
+            }
+            .price-row {
+                gap: 6px;
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+                align-items: baseline;
+            }
+            .price-now {
+                font-size: 1.3rem;
+            }
+            .price-was {
+                font-size: 0.8rem;
+            }
+            .price-badge {
+                font-size: 0.58rem;
+                padding: 2px 6px;
+            }
+            .product-features-list {
+                display: none;
+            }
+            .btn-order {
+                margin-top: auto;
+                padding: 9px 6px;
+                font-size: 0.78rem;
+                border-radius: var(--radius-sm);
+                gap: 4px;
+            }
+            .btn-order svg {
+                width: 14px;
+                height: 14px;
+            }
+            .product-deck-dots {
+                display: none;
+            }
+        }
+        @media (min-width: 768px) {
+            .product-pills { justify-content: center; }
+            .hero-slide img { height: 55vw; max-height: 480px; }
+            .features-grid { grid-template-columns: repeat(4, 1fr); }
+            .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+            .product-card { margin-bottom: 0; }
+            .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+            .contact-card { margin-bottom: 0; }
+            .testimonial-card { min-width: 46%; }
+            .modal-sheet { border-radius: var(--radius-xl); margin-bottom: 30px; }
+        }
+        @media (min-width: 1024px) {
+            .products-grid { grid-template-columns: repeat(3, 1fr); }
+        }
     </style>
 </head>
-<body class="text-slate-800">
+<body>
 
-    <nav class="bg-white/80 sticky-nav shadow-sm">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="#home" class="flex-shrink-0 flex items-center space-x-3">
-                    <img src="prime-faster-logo.jpg" alt="Prime Faster Logo" class="h-12 w-auto rounded-md">
-                    <span class="font-bold text-2xl text-slate-900">Prime Faster</span>
-                </a>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="nav-link text-slate-600 hover:text-blue-600 font-medium">Features</a>
-                    <a href="#pricing" class="nav-link text-slate-600 hover:text-blue-600 font-medium">Pricing</a>
-                    <a href="#gallery" class="nav-link text-slate-600 hover:text-blue-600 font-medium">Gallery</a>
-                    <a href="#testimonials" class="nav-link text-slate-600 hover:text-blue-600 font-medium">Testimonials</a>
-                    <a href="#faq" class="nav-link text-slate-600 hover:text-blue-600 font-medium">FAQ</a>
-                </div>
-                <a href="#order" class="hidden md:inline-block px-5 py-2.5 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Order Now
-                </a>
-                <div class="md:hidden">
-                     <a href="#order" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-full shadow-sm hover:bg-blue-700 text-sm">Order</a>
-                </div>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-brand">
+            <div class="preloader-logo-wrap">
+                <div class="preloader-spinner"></div>
+                <img src="notebook-wallah-logo.png" alt="Notebook Wallah">
             </div>
+            <div class="preloader-title">Notebook <span>Wallah</span></div>
+            <div class="preloader-subtitle">WRITE • LEARN • GROW</div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="#home" class="navbar-brand">
+                <img src="notebook-wallah-logo.png" alt="Notebook Wallah" class="navbar-logo">
+                <div class="brand-text">Notebook <span>Wallah</span></div>
+            </a>
+            <a href="#products" class="nav-order-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Order
+            </a>
         </div>
     </nav>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-        <header id="home" class="grid md:grid-cols-2 gap-10 items-center py-20 md:py-32">
-            <div class="text-center md:text-left reveal">
-                <span class="text-blue-600 font-semibold tracking-wide uppercase">By Students, For Students</span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mt-2 leading-tight">
-                    Premium Notebooks, <span class="text-blue-600">Student Prices.</span>
-                </h1>
-                <p class="mt-6 text-lg text-slate-600 max-w-xl mx-auto md:mx-0">
-                    Experience the perfect blend of high-quality paper, durable design, and affordable pricing. Your success starts with the right tools.
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="#pricing" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-transform transform hover:scale-105">
-                        View Pricing
-                    </a>
-                    <a href="#features" class="px-8 py-3 bg-slate-200 text-slate-800 font-semibold rounded-full shadow-lg hover:bg-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 transition-transform transform hover:scale-105">
-                        Learn More
-                    </a>
-                </div>
+    <!-- HERO — IMAGE ONLY -->
+    <section class="hero" id="home">
+        <div class="hero-carousel">
+            <div class="hero-track" id="heroTrack">
+                <div class="hero-slide"><img src="notebooks-on-desk.jpg" alt="Premium notebook collection"></div>
+                <div class="hero-slide"><img src="notebook-stack-talent-cover.jpg" alt="Stacked notebooks with stylish covers"></div>
+                <div class="hero-slide"><img src="notebooks-fanned-out.jpg" alt="Variety of notebook designs"></div>
             </div>
-            <div class="reveal">
-                <img src="notebooks-on-desk.jpg" alt="A collection of Prime Faster notebooks" class="rounded-2xl shadow-2xl w-full h-full object-cover transform transition-transform duration-500 hover:scale-105">
-            </div>
-        </header>
-
-        <section id="features" class="py-20 md:py-28">
-             <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">The Prime Faster Advantage</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">Engineered for the demands of student life.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 reveal">
-                    <div class="mx-auto bg-blue-100 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Superior Paper Quality</h3>
-                    <p class="text-slate-600">Enjoy a smooth, 70 GSM bleed-proof writing experience that makes note-taking a pleasure.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 100ms;">
-                    <div class="mx-auto bg-blue-100 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                         <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.747h18"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 18h16"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Durable Binding</h3>
-                    <p class="text-slate-600">Our sturdy center-stitched binding keeps your important notes secure all semester long.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 200ms;">
-                    <div class="mx-auto bg-blue-100 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Inspiring Designs</h3>
-                    <p class="text-slate-600">Choose from a variety of modern, attractive covers that match your personal style.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 300ms;">
-                    <div class="mx-auto bg-blue-100 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-                       <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path d="M15.536 8.464A5 5 0 008.464 15.536" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Eco-Friendly</h3>
-                    <p class="text-slate-600">Made with paper from responsibly managed forests, because we care about our planet.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-us" class="py-20 md:py-28">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="reveal">
-                    <img src="notebook-stack-talent-cover.jpg" alt="Stacked Prime Faster notebooks" class="rounded-2xl shadow-xl w-full h-full object-cover">
-                </div>
-                <div class="reveal">
-                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Our Story is Simple: We Get It.</h2>
-                    <p class="mt-6 text-lg text-slate-600">As students, we were tired of the choice between overpriced notebooks and flimsy paper that couldn't handle a simple gel pen. We knew there had to be a better way.</p>
-                    <p class="mt-4 text-lg text-slate-600">So, we provided Prime Faster. Our mission is to provide fellow students with premium, durable, and inspiring notebooks at a price that makes sense. We believe you shouldn't have to compromise on the tools you need to succeed.</p>
-                    <div class="mt-10 grid grid-cols-2 gap-8 text-center">
-                        <div>
-                            <span id="students-counter" class="text-4xl font-bold text-blue-600">20</span>+
-                            <p class="text-slate-500 mt-2">Happy Students Served</p>
-                        </div>
-                        <div>
-                            <span id="pages-counter" class="text-4xl font-bold text-blue-600">70</span> GSM
-                            <p class="text-slate-500 mt-2">Smooth, Quality Pages</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="my-20 reveal">
-            <div class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl shadow-lg p-10 text-center text-white relative overflow-hidden">
-                 <div class="absolute inset-0 bg-blue-500/5 mix-blend-overlay"></div>
-                <h3 class="text-3xl font-bold">Student Wholesale Offer!</h3>
-                <p class="mt-2 text-lg">Planning to stock up for the semester? <br>Get a special discount at <span class="font-bold text-amber-400 text-2xl">COST-TO-COST</span> prices on bulk orders!</p>
-            </div>
-        </section>
-        
-        <section id="pricing" class="py-20 md:py-28">
-             <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Unbeatable Prices, Clear Savings</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
-                    Use the buttons to compare our prices against the market. The choice is clear.
-                </p>
-            </div>
-            <div class="bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-xl reveal">
-                <div class="flex justify-center items-center space-x-4 mb-10">
-                    <button id="btn-172" class="px-6 py-2.5 bg-blue-600 text-white font-semibold rounded-full shadow-md transition-all duration-300">172 Pages</button>
-                    <button id="btn-140" class="px-6 py-2.5 bg-slate-200 text-slate-800 font-semibold rounded-full shadow-md transition-all duration-300">140 Pages</button>
-                </div>
-                <div class="chart-container">
-                    <canvas id="priceComparisonChart"></canvas>
-                </div>
-                <div id="order-form" class="mt-16 pt-10 border-t border-slate-200">
-                    <h3 class="text-2xl font-bold text-center mb-8">Build Your Order</h3>
-                    <div class="max-w-xl mx-auto space-y-6">
-                        <div>
-                            <label for="customerName" class="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
-                            <input type="text" id="customerName" placeholder="e.g., Rohan Sharma" class="mt-1 block w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                        </div>
-                        <div class="grid sm:grid-cols-2 gap-6">
-                             <div>
-                                <label for="notebookType" class="block text-sm font-medium text-slate-700 mb-1">Notebook Type</label>
-                                <select id="notebookType" class="mt-1 block w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                    <option value="172 Pages">172 Pages (₹40)</option>
-                                    <option value="140 Pages">140 Pages (₹35)</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="quantity" class="block text-sm font-medium text-slate-700 mb-1">Quantity</label>
-                                <input type="number" id="quantity" value="1" min="1" class="mt-1 block w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
-                        </div>
-                        <button id="whatsappOrderBtn" class="w-full inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition-transform transform hover:scale-105">
-                            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12h-.01c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78 4.84 0 8.78 3.94 8.78 8.78s-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
-                            Send Order via WhatsApp
-                        </button>
-                        <p class="text-xs text-center text-slate-500">You'll be redirected to WhatsApp to confirm your order with Atharv or Pankaj.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="py-20 md:py-28">
-             <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Designs to Match Your Style</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">Click on any image to see a larger view.</p>
-            </div>
-            <div id="image-gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <div class="overflow-hidden rounded-xl shadow-lg reveal"><img src="notebook-stack-talent-cover.jpg" alt="Notebook Design with animated boy" class="gallery-item w-full h-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
-                <div class="overflow-hidden rounded-xl shadow-lg reveal" style="transition-delay: 100ms;"><img src="notebook-knowledge-cover.jpg" alt="Notebook Design with boy holding a book" class="gallery-item w-full h-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
-                <div class="overflow-hidden rounded-xl shadow-lg reveal" style="transition-delay: 200ms;"><img src="notebook-scenery-covers.jpg" alt="Notebook designs with scenery" class="gallery-item w-full h-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
-                <div class="overflow-hidden rounded-xl shadow-lg reveal" style="transition-delay: 300ms;"><img src="notebooks-fanned-out.jpg" alt="Three notebook designs" class="gallery-item w-full h-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
-            </div>
-        </section>
-
-        <div id="lightbox" class="lightbox">
-            <span id="lightbox-close" class="lightbox-close">&times;</span>
-            <img id="lightbox-image" class="lightbox-content rounded-lg" src="" alt="Enlarged notebook view">
+            <div class="hero-progress"><div class="hero-progress-bar" id="heroProgressBar"></div></div>
         </div>
+        <div class="hero-dots" id="heroDots">
+            <button class="hero-dot active" data-i="0" aria-label="Slide 1"></button>
+            <button class="hero-dot" data-i="1" aria-label="Slide 2"></button>
+            <button class="hero-dot" data-i="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="info-strip">
+            <div class="info-item">
+                <div class="info-value">150+</div>
+                <div class="info-label">Students</div>
+            </div>
+            <div class="info-item">
+                <div class="info-value">70 GSM</div>
+                <div class="info-label">Paper Quality</div>
+            </div>
+            <div class="info-item">
+                <div class="info-value">₹35–45</div>
+                <div class="info-label">Price Range</div>
+            </div>
+        </div>
+    </section>
 
-         <section id="testimonials" class="py-20 md:py-28">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">What Our Friends Say</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">Feedback from students who love our notebooks.</p>
+    <!-- PRODUCTS -->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-overline">Our Products</div>
+                <h2 class="section-title">Choose Your Notebook</h2>
+                <p class="section-desc">Premium quality at prices that make sense. Tap to order via WhatsApp.</p>
+                <div class="section-divider"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg relative reveal">
-                    <svg class="absolute top-6 left-6 w-12 h-12 text-blue-100" fill="currentColor" viewBox="0 0 32 32"><path d="M9.333 22.667h-4c-1.473 0-2.667-1.194-2.667-2.667v-8c0-1.473 1.194-2.667 2.667-2.667h6.667v8c0 2.947-2.386 5.333-5.333 5.333zM26.667 22.667h-4c-1.473 0-2.667-1.194-2.667-2.667v-8c0-1.473 1.194-2.667 2.667-2.667h6.667v8c0 2.947-2.386 5.333-5.333 5.333z"></path></svg>
-                    <p class="text-slate-600 italic relative z-10">"The paper quality is amazing! My pen just glides on the page, and there's no ink bleeding through. Finally, a notebook that's worth the price."</p>
-                  
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg relative reveal" style="transition-delay: 100ms;">
-                    <svg class="absolute top-6 left-6 w-12 h-12 text-blue-100" fill="currentColor" viewBox="0 0 32 32"><path d="M9.333 22.667h-4c-1.473 0-2.667-1.194-2.667-2.667v-8c0-1.473 1.194-2.667 2.667-2.667h6.667v8c0 2.947-2.386 5.333-5.333 5.333zM26.667 22.667h-4c-1.473 0-2.667-1.194-2.667-2.667v-8c0-1.473 1.194-2.667 2.667-2.667h6.667v8c0 2.947-2.386 5.333-5.333 5.333z"></path></svg>
-                    <p class="text-slate-600 italic relative z-10">"I love the designs on the cover. It's nice to have a notebook that's not boring. The binding is also really strong and has survived my packed bag."</p>
-                 
-                </div>
-                 <div class="bg-white p-8 rounded-2xl shadow-lg relative reveal" style="transition-delay: 200ms;">
-                    <svg class="absolute top-6 left-6 w-12 h-12 text-blue-100" fill="currentColor" viewBox="0 0 32 32"><path d="M9.333 22.667h-4c-1.473 0-2.667-1.194-2.667-2.667v-8c0-1.473 1.194-2.667 2.667-2.667h6.667v8c0 2.947-2.386 5.333-5.333 5.333zM26.667 22.667h-4c-1.473 0-2.667-1.194-2.667-2.667v-8c0-1.473 1.194-2.667 2.667-2.667h6.667v8c0 2.947-2.386 5.333-5.333 5.333z"></path></svg>
-                    <p class="text-slate-600 italic relative z-10">"Honestly, the best value for money. As a student, every rupee counts, and Prime Faster delivers on both quality and affordability. Highly recommended!"</p>
-    
-                </div>
-            </div>
-        </section>
 
-        <section id="faq" class="py-20 md:py-28">
-             <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Frequently Asked Questions</h2>
+            <div class="product-pills reveal">
+                <button class="pill-btn active" onclick="filterProducts('all', this)">All Notebooks (3)</button>
+                <button class="pill-btn" onclick="filterProducts('ganga', this)">Ganga (₹40)</button>
+                <button class="pill-btn" onclick="filterProducts('fusion', this)">Fusion (₹45)</button>
+                <button class="pill-btn" onclick="filterProducts('ca', this)">CA Books (₹45)</button>
             </div>
-            <div class="max-w-3xl mx-auto space-y-4">
-                <details class="bg-white p-6 rounded-xl shadow-lg group reveal">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                        Is there a minimum order quantity?
-                        <svg class="arrow-icon w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <p class="mt-4 text-slate-600">There is no minimum order! You can buy as little as one notebook. However, remember to ask about our special wholesale prices for orders of 12 or more!</p>
-                </details>
-                 <details class="bg-white p-6 rounded-xl shadow-lg group reveal">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                        Do you offer delivery?
-                        <svg class="arrow-icon w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <p class="mt-4 text-slate-600">Currently, we operate on a pickup-only basis from our location in Pune. Please check the "Get Directions" link below. We are working on providing delivery options in the future!</p>
-                </details>
-                 <details class="bg-white p-6 rounded-xl shadow-lg group reveal">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                        What is the quality of the paper?
-                         <svg class="arrow-icon w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </summary>
-                    <p class="mt-4 text-slate-600">Our notebooks use high-quality, 70 GSM paper that is sourced from eco-friendly, responsibly managed forests. It's thick enough to prevent most ink from bleeding through, providing a smooth writing experience.</p>
-                </details>
-            </div>
-        </section>
-    </main>
 
-    <footer id="order" class="bg-slate-900 text-white mt-20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center reveal">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Ready to Upgrade Your Study Game?</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">Contact us via WhatsApp for the fastest service, or visit us after 5 PM. We're ready to help you get the best notebooks in Pune.</p>
+            <div class="products-grid" id="productsGrid">
+                <!-- Ganga -->
+                <div class="product-card reveal" data-category="ganga">
+                    <div class="product-img-wrap">
+                        <img src="notebook-knowledge-cover.jpg" alt="Ganga Notebook 172 pages">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Ganga Notebook</h3>
+                        <p class="product-spec">172 Pages · A4 · Ruled</p>
+                        <div class="price-row">
+                            <span class="price-now">₹40</span>
+                            <span class="price-was">₹70</span>
+                            <span class="price-badge">SAVE 43%</span>
+                        </div>
+                        <ul class="product-features-list">
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> 70 GSM</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Bleed-proof</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Durable</li>
+                        </ul>
+                        <button class="btn-order" onclick="openModal('Ganga Notebook – 172 Pages',40)">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Order — ₹40
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fusion -->
+                <div class="product-card highlight reveal" data-category="fusion" style="transition-delay:80ms;">
+                    <div class="product-img-wrap">
+                        <span class="product-tag">Best Seller</span>
+                        <img src="notebook-stack-talent-cover.jpg" alt="Fusion Notebook 200 pages">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Fusion Notebook</h3>
+                        <p class="product-spec">200 Pages · A4 · Ruled</p>
+                        <div class="price-row">
+                            <span class="price-now">₹45</span>
+                            <span class="price-was">₹70</span>
+                            <span class="price-badge">SAVE 36%</span>
+                        </div>
+                        <ul class="product-features-list">
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> 200 Pages</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Best Value</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Smooth</li>
+                        </ul>
+                        <button class="btn-order" onclick="openModal('Fusion Notebook – 200 Pages',45)">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Order — ₹45
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CA Books -->
+                <div class="product-card reveal" data-category="ca" style="transition-delay:160ms;">
+                    <div class="product-img-wrap">
+                        <span class="product-tag premium">Premium</span>
+                        <img src="notebook-scenery-covers.jpg" alt="CA Books 172 pages premium paper">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">CA Books</h3>
+                        <p class="product-spec">172 Pages · A4 · Premium Paper</p>
+                        <div class="price-row">
+                            <span class="price-now">₹45</span>
+                            <span class="price-was">₹90</span>
+                            <span class="price-badge">SAVE 50%</span>
+                        </div>
+                        <ul class="product-features-list">
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Premium</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Ultra Smooth</li>
+                            <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> 50% Off</li>
+                        </ul>
+                        <button class="btn-order" onclick="openModal('CA Books – 172 Pages (Premium)',45)">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Order — ₹45
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="mt-16 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center reveal">
-                <div class="bg-slate-800 p-8 rounded-2xl shadow-lg flex flex-col items-center">
-                    <h3 class="text-2xl font-semibold mb-2 text-white">Atharv Jadhav</h3>
-                    <p class="text-lg text-slate-300 mb-6"><a href="tel:7796711431" class="hover:text-blue-400 transition">7796711431</a></p>
-                    <a href="https://wa.me/917796711431?text=Hi!%20I'd%20like%20to%20order%20Prime%20Faster%20notebooks." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition-transform transform hover:scale-105">
-                       Chat on WhatsApp
+
+            <div class="product-deck-dots" id="productDeckDots">
+                <div class="product-deck-dot active"></div>
+                <div class="product-deck-dot"></div>
+                <div class="product-deck-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-overline">Why Us</div>
+                <h2 class="section-title">The Notebook Wallah Advantage</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon i1">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="feature-name">Superior Paper</h3>
+                    <p class="feature-text">70 GSM bleed-proof pages for smooth writing</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay:60ms;">
+                    <div class="feature-icon i2">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 6h6M9 10h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="feature-name">Strong Binding</h3>
+                    <p class="feature-text">Durable stitching that lasts all semester</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay:120ms;">
+                    <div class="feature-icon i3">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM16.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM7.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM9 14.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="feature-name">Stylish Covers</h3>
+                    <p class="feature-text">Modern designs that match your style</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay:180ms;">
+                    <div class="feature-icon i4">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22s3.5-5.5 8-8.5c5-3.5 11.5-3.5 11.5-3.5s0 6.5-3.5 11.5C15 20.5 9.5 24 9.5 24" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 13.5L2 22" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="feature-name">Eco-Friendly</h3>
+                    <p class="feature-text">Responsibly sourced forest paper</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHOLESALE BANNER -->
+    <section class="section">
+        <div class="container">
+            <div class="banner-card reveal">
+                <div class="banner-icon">
+                    <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3 class="banner-title">Wholesale Offer for Students!</h3>
+                <p class="banner-desc">Order 12+ notebooks and get special bulk pricing</p>
+                <div class="banner-badge">COST-TO-COST Prices</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="reviews" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-overline">Reviews</div>
+                <h2 class="section-title">What Students Say</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonials-scroll">
+                <div class="testimonial-card reveal">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-text">"The paper quality is amazing! My pen just glides on the page, and there's no ink bleeding through. Finally, a notebook worth the price."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">R</div>
+                        <div><div class="t-name">Rohan S.</div><div class="t-role">Engineering Student</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:80ms;">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-text">"I love the cover designs. The binding is really strong and has survived my packed bag all semester. Great value for money!"</p>
+                    <div class="t-author">
+                        <div class="t-avatar">P</div>
+                        <div><div class="t-name">Priya K.</div><div class="t-role">Commerce Student</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:160ms;">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-text">"Best value for money, every rupee counts as a student. Notebook Wallah delivers on both quality and affordability. Highly recommended!"</p>
+                    <div class="t-author">
+                        <div class="t-avatar">A</div>
+                        <div><div class="t-name">Arjun M.</div><div class="t-role">Science Student</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swipe-hint">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-4-4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Swipe for more
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-overline">Help</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div>
+                <details class="faq-item reveal">
+                    <summary>Is there a minimum order quantity?<span class="faq-chevron">+</span></summary>
+                    <p class="faq-answer">No minimum order! Buy even one notebook. For orders of 12+, ask about our special wholesale (cost-to-cost) pricing.</p>
+                </details>
+                <details class="faq-item reveal" style="transition-delay:60ms;">
+                    <summary>Do you offer delivery?<span class="faq-chevron">+</span></summary>
+                    <p class="faq-answer">Currently pickup-only from our Pune location. Visit us after 5 PM or tap "Get Directions" below. Delivery options coming soon!</p>
+                </details>
+                <details class="faq-item reveal" style="transition-delay:120ms;">
+                    <summary>What is the paper quality?<span class="faq-chevron">+</span></summary>
+                    <p class="faq-answer">Our notebooks use 70 GSM paper from eco-friendly, responsibly managed forests. Thick enough to prevent ink bleeding, providing a smooth writing experience.</p>
+                </details>
+                <details class="faq-item reveal" style="transition-delay:180ms;">
+                    <summary>What's the difference between the 3 types?<span class="faq-chevron">+</span></summary>
+                    <p class="faq-answer">Ganga (172 pages, ₹40) — classic everyday. Fusion (200 pages, ₹45) — best value with extra pages. CA Books (172 pages, ₹45) — premium paper for the smoothest writing.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-overline">Contact</div>
+                <h2 class="section-title">Ready to Order?</h2>
+                <p class="section-desc">Message us on WhatsApp or visit us in Pune after 5 PM.</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-card reveal">
+                    <div class="c-name">Atharv Jadhav</div>
+                    <div class="c-phone"><a href="tel:7796711431">7796711431</a></div>
+                    <a href="https://wa.me/917796711431?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah." target="_blank" rel="noopener noreferrer" class="btn-wa">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+                        WhatsApp
                     </a>
                 </div>
-                 <div class="bg-slate-800 p-8 rounded-2xl shadow-lg flex flex-col items-center">
-                    <h3 class="text-2xl font-semibold mb-2 text-white">Pankaj Shinde</h3>
-                    <p class="text-lg text-slate-300 mb-6"><a href="tel:8788364740" class="hover:text-blue-400 transition">8788364740</a></p>
-                     <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20Prime%20Faster%20notebooks." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition-transform transform hover:scale-105">
-                        Chat on WhatsApp
+                <div class="contact-card reveal" style="transition-delay:80ms;">
+                    <div class="c-name">Pankaj Shinde</div>
+                    <div class="c-phone"><a href="tel:8788364740">8788364740</a></div>
+                    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah." target="_blank" rel="noopener noreferrer" class="btn-wa">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+                        WhatsApp
                     </a>
                 </div>
             </div>
-             <div class="mt-16 text-center reveal">
-                 <a href="https://maps.app.goo.gl/8VAYwAFPrsnDFqv16?g_st=aw" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-amber-500 text-white font-semibold rounded-full shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 transition-transform transform hover:scale-105">
-                    Get Directions to Our Location
-                </a>
+            <a href="https://maps.app.goo.gl/8VAYwAFPrsnDFqv16?g_st=aw" target="_blank" rel="noopener noreferrer" class="btn-map reveal" style="transition-delay:120ms;">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Get Directions — Pune
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <img src="notebook-wallah-logo.png" alt="Notebook Wallah">
+                <span class="footer-brand-text">Notebook <span>Wallah</span></span>
             </div>
-            <div class="mt-20 pt-8 border-t border-slate-700 text-center text-slate-400">
-                <p>&copy; 2025 Prime Faster. All rights reserved.</p>
-            </div>
+            <p class="footer-copy">© 2025 Notebook Wallah · Made with ❤️ in Pune</p>
         </div>
     </footer>
 
+    <!-- ORDER MODAL -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-sheet">
+            <div class="modal-handle"></div>
+            <div class="modal-head">
+                <h3 class="modal-title" id="modalTitle">Order Notebook</h3>
+                <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
+            </div>
+            <form id="orderForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label class="form-label" for="fName">Your Name</label>
+                    <input class="form-input" type="text" id="fName" placeholder="e.g., Rohan Sharma">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="fProduct">Product</label>
+                        <input class="form-input" type="text" id="fProduct" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="fQty">Quantity</label>
+                        <input class="form-input" type="number" id="fQty" value="1" min="1">
+                    </div>
+                </div>
+                <button type="button" class="btn-submit-wa" onclick="submitOrder()">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+                    Send Order via WhatsApp
+                </button>
+            </form>
+            <p class="form-note">You'll be redirected to WhatsApp to confirm your order</p>
+        </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/918788364740?text=Hi!%20I'd%20like%20to%20order%20notebooks%20from%20Notebook%20Wallah." target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.74.45 3.38 1.25 4.85L2 22l5.25-1.38c1.45.75 3.06 1.18 4.79 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12 20.12c-1.55 0-3.04-.42-4.34-1.2L7 18.57l-3.54.93.94-3.45-.34-.54C3.25 14.15 2.83 12.6 2.83 11c0-4.84 3.94-8.78 8.78-8.78s8.78 3.94 8.78 8.78-3.94 8.78-8.78 8.78zm4.53-6.55c-.27-.14-1.61-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.05-.16.18-.32.2-.59.06-.27-.14-1.15-.42-2.19-1.35-.81-.73-1.36-1.63-1.52-1.9-.16-.27-.02-.42.12-.55.13-.12.27-.32.41-.47.13-.16.18-.27.27-.45.09-.18.05-.35-.02-.49-.06-.14-.61-1.45-.83-2-.22-.54-.44-.47-.61-.47h-.52c-.18 0-.46.07-.7.35-.24.27-.92.9-1.12 2.17-.2 1.27.35 2.52.41 2.69.06.18 1.79 2.73 4.34 3.82.59.27 1.05.43 1.41.55.6.2 1.14.16 1.56.1.48-.07 1.61-.66 1.83-1.28.23-.62.23-1.15.16-1.28-.07-.13-.25-.2-.52-.34z"/></svg>
+    </a>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Chart.js Logic ---
-            const chartData = {
-                '172': { labels: ['MRP', 'Market Price', 'Our Price'], values: [70, 65, 40], title: '172 Page Notebook Price Comparison (₹)' },
-                '140': { labels: ['MRP', 'Market Price', 'Our Price'], values: [60, 55, 35], title: '140 Page Notebook Price Comparison (₹)' }
-            };
-            const ctx = document.getElementById('priceComparisonChart').getContext('2d');
-            let priceChart;
-            const btn172 = document.getElementById('btn-172');
-            const btn140 = document.getElementById('btn-140');
-            
-            function updateChart(pages) {
-                const data = chartData[pages];
-                if (priceChart) priceChart.destroy();
-                priceChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: data.labels,
-                        datasets: [{
-                            label: 'Price in ₹', data: data.values,
-                            backgroundColor: ['rgba(239, 68, 68, 0.7)', 'rgba(245, 158, 11, 0.7)', 'rgba(37, 99, 235, 0.8)'],
-                            borderColor: ['#EF4444', '#F59E0B', '#2563EB'],
-                            borderWidth: 2, borderRadius: 8, barThickness: 50,
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: {
-                            legend: { display: false },
-                            title: { display: true, text: data.title, font: { size: 18, weight: '600', family: 'Poppins' }, padding: { bottom: 30 }, color: '#1E293B' },
-                            tooltip: { 
-                                callbacks: { label: (context) => `Price: ₹${context.raw}` },
-                                backgroundColor: '#1E293B', titleFont: { size: 14, family: 'Poppins' }, bodyFont: { size: 12, family: 'Poppins' }, padding: 10, cornerRadius: 5
-                            }
-                        },
-                        scales: {
-                            y: { beginAtZero: true, grid: { color: '#E2E8F0' }, ticks: { color: '#475569', font: { family: 'Poppins' } } },
-                            x: { grid: { display: false }, ticks: { color: '#1E293B', font: { size: 14, weight: '500', family: 'Poppins' } } }
-                        }
-                    }
-                });
-            }
+        // === Navbar scroll ===
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 30), { passive: true });
 
-            btn172.addEventListener('click', () => {
-                updateChart('172');
-                btn172.classList.add('bg-blue-600', 'text-white');
-                btn172.classList.remove('bg-slate-200', 'text-slate-800');
-                btn140.classList.add('bg-slate-200', 'text-slate-800');
-                btn140.classList.remove('bg-blue-600', 'text-white');
-            });
-            btn140.addEventListener('click', () => {
-                updateChart('140');
-                btn140.classList.add('bg-blue-600', 'text-white');
-                btn140.classList.remove('bg-slate-200', 'text-slate-800');
-                btn172.classList.add('bg-slate-200', 'text-slate-800');
-                btn172.classList.remove('bg-blue-600', 'text-white');
-            });
-            updateChart('172'); // Initial chart
+        // === Hero Carousel (image-only, auto-rotate with progress bar) ===
+        const heroTrack = document.getElementById('heroTrack');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        const progressBar = document.getElementById('heroProgressBar');
+        let heroIndex = 0;
+        const heroTotal = 3;
+        const slideInterval = 4000; // 4 seconds per slide
+        let heroTimer, progressTimer;
+        let progressStart;
 
-            // --- Order Form Logic ---
-            const whatsappOrderBtn = document.getElementById('whatsappOrderBtn');
-            whatsappOrderBtn.addEventListener('click', () => {
-                const name = document.getElementById('customerName').value.trim() || 'Valued Customer';
-                const type = document.getElementById('notebookType').value;
-                const quantity = document.getElementById('quantity').value;
-                let message = `Hi! I'd like to order from Prime Faster.\n\n*Name:* ${name}\n*Product:* ${quantity} x ${type} Notebook(s)`;
-                if (quantity >= 12) {
-                    message += `\n\nI'm interested in the special wholesale (cost-to-cost) price for ordering a dozen or more. Could you please provide details?`;
+        function goHero(i) {
+            heroIndex = i;
+            heroTrack.style.transform = `translateX(-${heroIndex * 100}%)`;
+            heroDots.forEach((d, idx) => d.classList.toggle('active', idx === heroIndex));
+        }
+
+        function animateProgress() {
+            progressStart = performance.now();
+            cancelAnimationFrame(progressTimer);
+            function tick(now) {
+                const elapsed = now - progressStart;
+                const pct = Math.min((elapsed / slideInterval) * 100, 100);
+                progressBar.style.width = pct + '%';
+                if (pct < 100) {
+                    progressTimer = requestAnimationFrame(tick);
                 }
-                const encodedMessage = encodeURIComponent(message);
-                const whatsappUrl = `https://wa.me/917796711431?text=${encodedMessage}`;
-                window.open(whatsappUrl, '_blank');
-            });
-
-            // --- Lightbox Gallery Logic ---
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxClose = document.getElementById('lightbox-close');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    lightbox.style.display = 'flex';
-                    lightboxImage.src = item.src;
-                });
-            });
-            const closeLightbox = () => lightbox.style.display = 'none';
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', (e) => e.target === lightbox && closeLightbox());
-
-            // --- Navigation scroll highlighting & Scroll Animations ---
-            const sections = document.querySelectorAll('section[id], header[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const revealElements = document.querySelectorAll('.reveal');
-
-            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
-            const navObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        navLinks.forEach(link => {
-                            link.classList.toggle('nav-link-active', link.getAttribute('href') === `#${id}`);
-                        });
-                    }
-                });
-            }, observerOptions);
-            sections.forEach(section => navObserver.observe(section));
-            
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            revealElements.forEach(el => revealObserver.observe(el));
-
-            // --- Animated Counter Logic ---
-            function animateCounter(element, start, end, duration) {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    element.innerHTML = Math.floor(progress * (end - start) + start);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
             }
+            progressTimer = requestAnimationFrame(tick);
+        }
 
-            const counterObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const studentsCounter = document.getElementById('students-counter');
-                        const pagesCounter = document.getElementById('pages-counter');
-                        animateCounter(studentsCounter, 0, 150, 2000);
-                        animateCounter(pagesCounter, 0, 70, 1500);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.8 });
+        function nextHero() {
+            goHero((heroIndex + 1) % heroTotal);
+            animateProgress();
+        }
 
-            const counterSection = document.getElementById('why-us');
-            if (counterSection) {
-                 counterObserver.observe(counterSection);
+        function startHero() {
+            animateProgress();
+            heroTimer = setInterval(nextHero, slideInterval);
+        }
+
+        function resetHero() {
+            clearInterval(heroTimer);
+            startHero();
+        }
+
+        heroDots.forEach(d => d.addEventListener('click', () => {
+            goHero(parseInt(d.dataset.i));
+            resetHero();
+        }));
+
+        // Touch swipe
+        let tx0 = 0;
+        heroTrack.addEventListener('touchstart', e => { tx0 = e.changedTouches[0].screenX; }, { passive: true });
+        heroTrack.addEventListener('touchend', e => {
+            const diff = tx0 - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && heroIndex < heroTotal - 1) goHero(heroIndex + 1);
+                else if (diff < 0 && heroIndex > 0) goHero(heroIndex - 1);
+                resetHero();
             }
-        });
+        }, { passive: true });
+
+        startHero();
+
+        // === Order Modal ===
+        const modal = document.getElementById('orderModal');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        let curPrice = 0;
+
+        function openModal(product, price) {
+            document.getElementById('fProduct').value = product;
+            document.getElementById('modalTitle').textContent = 'Order ' + product.split('–')[0].trim();
+            curPrice = price;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+        function submitOrder() {
+            const name = document.getElementById('fName').value.trim() || 'Customer';
+            const product = document.getElementById('fProduct').value;
+            const qty = document.getElementById('fQty').value;
+            const total = curPrice * qty;
+            let msg = `Hi! I'd like to order from *Notebook Wallah* 📓\n\n*Name:* ${name}\n*Product:* ${product}\n*Qty:* ${qty}\n*Est. Total:* ₹${total}`;
+            if (qty >= 12) msg += `\n\nBulk order — please share wholesale price! 🙏`;
+            window.open(`https://wa.me/918788364740?text=${encodeURIComponent(msg)}`, '_blank');
+            closeModal();
+        }
+
+        // === Scroll Reveal ===
+        const revealObs = new IntersectionObserver((entries, obs) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        // === Aesthetic Preloader Dismissal ===
+        function dismissPreloader() {
+            const preloader = document.getElementById('preloader');
+            if (preloader && !preloader.classList.contains('fade-out')) {
+                preloader.classList.add('fade-out');
+            }
+        }
+        window.addEventListener('load', () => setTimeout(dismissPreloader, 500));
+        setTimeout(dismissPreloader, 2000); // Safety fallback
+
+        // === Product Filter Pills ===
+        function filterProducts(category, btn) {
+            document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // === Product Deck Scroll Dots Sync (Mobile) ===
+        const pGrid = document.getElementById('productsGrid');
+        const pDots = document.querySelectorAll('.product-deck-dot');
+        if (pGrid && pDots.length) {
+            pGrid.addEventListener('scroll', () => {
+                const scrollLeft = pGrid.scrollLeft;
+                const cardWidth = pGrid.firstElementChild ? pGrid.firstElementChild.offsetWidth + 16 : 300;
+                const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), pDots.length - 1);
+                pDots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === activeIndex);
+                });
+            }, { passive: true });
+        }
     </script>
 </body>
-
 </html>
-
-
