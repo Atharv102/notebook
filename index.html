@@ -1857,8 +1857,83 @@
                 <p class="banner-desc">By Students For Students</p>
                 <div class="banner-badge">COST-TO-COST Prices</div>
             </div>
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-overline">Gallery</div>
+                <h2 class="section-title">Notebook Showcase</h2>
+                <p class="section-desc">Tap any cover to view in full resolution.</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" onclick="openLightbox(0)">
+                    <img src="gallery/nb (1).jpg" alt="Notebook Design 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay:40ms;" onclick="openLightbox(1)">
+                    <img src="gallery/nb (2).jpg" alt="Notebook Design 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay:80ms;" onclick="openLightbox(2)">
+                    <img src="gallery/nb (3).jpg" alt="Notebook Design 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay:120ms;" onclick="openLightbox(3)">
+                    <img src="gallery/nb(4).jpg" alt="Notebook Design 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay:160ms;" onclick="openLightbox(4)">
+                    <img src="gallery/nb(5).jpg" alt="Notebook Design 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay:200ms;" onclick="openLightbox(5)">
+                    <img src="gallery/nb (6).jpg" alt="Notebook Design 6" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay:240ms;" onclick="openLightbox(6)">
+                    <img src="gallery/nb (7).jpg" alt="Notebook Design 7" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay:280ms;" onclick="openLightbox(7)">
+                    <img src="gallery/nb (8).jpg" alt="Notebook Design 8" loading="lazy">
+                    <div class="gallery-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <button class="lightbox-nav prev" onclick="changeLightbox(-1)">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lightbox-img-wrap">
+            <img id="lightboxImg" src="" alt="Enlarged Notebook">
+        </div>
+        <button class="lightbox-nav next" onclick="changeLightbox(1)">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lightbox-caption" id="lightboxCaption">Design 1 of 8</div>
+    </div>
 
     <!-- TESTIMONIALS -->
     <section class="section" id="reviews" style="background: var(--white);">
@@ -2198,6 +2273,65 @@
                 });
             }, { passive: true });
         }
+
+        // === Gallery Lightbox Logic ===
+        const galleryImages = [
+            'gallery/nb (1).jpg',
+            'gallery/nb (2).jpg',
+            'gallery/nb (3).jpg',
+            'gallery/nb(4).jpg',
+            'gallery/nb(5).jpg',
+            'gallery/nb (6).jpg',
+            'gallery/nb (7).jpg',
+            'gallery/nb (8).jpg'
+        ];
+        let currentLbIndex = 0;
+        const lbModal = document.getElementById('lightboxModal');
+        const lbImg = document.getElementById('lightboxImg');
+        const lbCap = document.getElementById('lightboxCaption');
+        const lbClose = document.getElementById('lightboxClose');
+
+        function openLightbox(index) {
+            currentLbIndex = index;
+            lbImg.src = galleryImages[currentLbIndex];
+            lbCap.textContent = `Design ${currentLbIndex + 1} of ${galleryImages.length}`;
+            lbModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lbModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function changeLightbox(dir) {
+            currentLbIndex = (currentLbIndex + dir + galleryImages.length) % galleryImages.length;
+            lbImg.src = galleryImages[currentLbIndex];
+            lbCap.textContent = `Design ${currentLbIndex + 1} of ${galleryImages.length}`;
+        }
+
+        if (lbClose) lbClose.addEventListener('click', closeLightbox);
+        if (lbModal) {
+            lbModal.addEventListener('click', (e) => {
+                if (e.target === lbModal) closeLightbox();
+            });
+            let lbX0 = 0;
+            lbModal.addEventListener('touchstart', e => { lbX0 = e.changedTouches[0].screenX; }, { passive: true });
+            lbModal.addEventListener('touchend', e => {
+                const diff = lbX0 - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 40) {
+                    if (diff > 0) changeLightbox(1);
+                    else changeLightbox(-1);
+                }
+            }, { passive: true });
+        }
+
+        document.addEventListener('keydown', e => {
+            if (!lbModal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') changeLightbox(1);
+            if (e.key === 'ArrowLeft') changeLightbox(-1);
+        });
     </script>
 </body>
 
